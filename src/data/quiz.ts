@@ -121,11 +121,11 @@ export const results: Record<ResultType, ResultData> = {
   },
   TRAVEL: {
     type: 'TRAVEL',
-    title: 'マイル・旅行特化型',
-    cardName: 'Marriott Bonvoy アメリカン・エキスプレス・プレミアム・カード',
-    description: '旅行や出張を楽しむインフライトハッカーなあなたに。日常の決済でマイルや高級ホテルのポイントが貯まり、非日常の体験を劇的にアップグレードします。',
-    features: ['無料宿泊特典のチャンス', '高還元なマイル移行率', '空港ラウンジや手荷物無料宅配など'],
-    affiliateLink: '#',
-    campaignText: '✈️ 新規入会後3ヶ月以内の利用で最大39,000ポイント獲得！',
+    title: 'ワンランク上の特権・プレミアム型',
+    cardName: '楽天プレミアムカード',
+    description: '国内外の空港ラウンジが使い放題になる「プライオリティ・パス」が無料で発行可能。出張や旅行が多く、楽天市場での買い物もお得にしたい方に真の価値を発揮する至高の一枚です。',
+    features: ['世界1,300ヶ所以上の空港ラウンジが無料', '楽天市場での脅威のポイント還元', '充実の国内・海外旅行傷害保険'],
+    affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918f0a.735b8dbe.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6NTUwOTk0LCJhbXAiOmZhbHNlfQ%3D%3D',
+    campaignText: '✈️ 新規入会＆利用でポイントプレゼント中！',
   },
 };

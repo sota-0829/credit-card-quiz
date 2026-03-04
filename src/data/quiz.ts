@@ -25,6 +25,19 @@ export interface ResultData {
   features: string[];
   affiliateLink: string;
   campaignText?: string;
+  // A8.net affiliate code parts
+  adScript?: {
+    id: string;      // ex: 'div_admane_async_1734_658_2971'
+    site: string;    // ex: '1734'
+    article: string; // ex: '658'
+    link: string;    // ex: '2971'
+    image: string;   // ex: '3218'
+    ns: string;      // ex: '1'
+    sad: string;     // ex: 's00000015110002'
+    code1: string;   // ex: '260304920240'
+    code2: string;   // ex: '4AZ8K8+3YW1YQ+38L8+BXQOH'
+  };
+  adPixel?: string;  // ex: 'https://www10.a8.net/0.gif?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH'
 }
 
 export const questions: Question[] = [
@@ -82,8 +95,20 @@ export const results: Record<ResultType, ResultData> = {
     cardName: '楽天プレミアムカード（または楽天カード）',
     description: 'あなたは徹底した実利主義のエンジニア。無駄なくザクザクポイントが貯まり、すぐに生活費やガジェット購入に充てられる高還元率カードが最適です。',
     features: ['どこでも高還元率', '貯まったポイントが使いやすい', '年会費の元がすぐ取れる'],
-    affiliateLink: '#',
+    affiliateLink: 'https://px.a8.net/svt/ejp?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH', // Note: Derived from the tracking pixel
     campaignText: '🎉 もれなく新規入会で最大10,000ポイントプレゼント中！',
+    adScript: {
+      id: 'div_admane_async_1734_658_2971',
+      site: '1734',
+      article: '658',
+      link: '2971',
+      image: '3218',
+      ns: '1',
+      sad: 's00000015110002',
+      code1: '260304920240',
+      code2: '4AZ8K8+3YW1YQ+38L8+BXQOH'
+    },
+    adPixel: 'https://www10.a8.net/0.gif?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH'
   },
   STATUS: {
     type: 'STATUS',

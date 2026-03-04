@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { ResultData, ResultType } from "@/data/quiz";
 import { cn } from "@/lib/utils";
 
@@ -27,6 +28,43 @@ interface ResultViewProps {
 }
 
 export function ResultView({ results, onReset }: ResultViewProps) {
+    useEffect(() => {
+        // Load A8.net base script if we have any adScripts
+        if (results.some(r => r.adScript)) {
+            const script = document.createElement("script");
+            script.src = "https://ad-verification.a8.net/ad/js/brandsafe.js";
+            script.async = true;
+            document.body.appendChild(script);
+
+            return () => {
+                document.body.removeChild(script);
+            };
+        }
+    }, [results]);
+
+    useEffect(() => {
+        // Evaluate embedded brand safe scripts
+        results.forEach(r => {
+            if (r.adScript && typeof window !== 'undefined') {
+                // Wait for brandsafe_js_async to load
+                const checkAndRun = setInterval(() => {
+                    // @ts-ignore
+                    if (window.brandsafe_js_async) {
+                        clearInterval(checkAndRun);
+                        // @ts-ignore
+                        window.brandsafe_js_async(
+                            '//ad-verification.a8.net/ad',
+                            `_site=${r.adScript!.site}&_article=${r.adScript!.article}&_link=${r.adScript!.link}&_image=${r.adScript!.image}&_ns=${r.adScript!.ns}&sad=${r.adScript!.sad}`,
+                            r.adScript!.code1,
+                            r.adScript!.code2
+                        );
+                    }
+                }, 100);
+                setTimeout(() => clearInterval(checkAndRun), 5000); // give up after 5s
+            }
+        });
+    }, [results]);
+
     if (!results || results.length === 0) return null;
 
     const primary = results[0];
@@ -101,6 +139,15 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                         </a>
 
                         <p className="text-xs text-slate-500 mt-3">※ 上記は広告リンクです</p>
+
+                        {/* A8.net Tracking Elements (Primary) */}
+                        {primary.adScript && (
+                            <div id={primary.adScript.id} className="hidden" />
+                        )}
+                        {primary.adPixel && (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={primary.adPixel} width="1" height="1" alt="" className="hidden" />
+                        )}
                     </div>
                 </div>
             </div>
@@ -140,6 +187,15 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                                     >
                                         詳細を見る
                                     </a>
+
+                                    {/* A8.net Tracking Elements (Secondary) */}
+                                    {subResult.adScript && (
+                                        <div id={subResult.adScript.id} className="hidden" />
+                                    )}
+                                    {subResult.adPixel && (
+                                        // eslint-disable-next-line @next/next/no-img-element
+                                        <img src={subResult.adPixel} width="1" height="1" alt="" className="hidden" />
+                                    )}
                                 </div>
                             );
                         })}

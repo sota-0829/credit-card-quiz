@@ -20,6 +20,21 @@ const typeConfig: Record<ResultType, { color: string; bgClass: string; iconPath:
         bgClass: "bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-950/40 dark:to-indigo-900/40",
         iconPath: <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6L3 8l6 5.3-2.9 2.9c-1 1-2.2 1.2-3.6 1.1L2 17l4.6 4.6.6.6c.1 1.4-.1 2.6-1.1 3.6l2.9-2.9L16 21l1.2.8c.4.2.7-.2.6-.6Z" />
     },
+    CONVENIENCE: {
+        color: "text-emerald-600 dark:text-emerald-500",
+        bgClass: "bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-emerald-950/40 dark:to-teal-900/40",
+        iconPath: <><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></>
+    },
+    AMAZON: {
+        color: "text-rose-600 dark:text-rose-500",
+        bgClass: "bg-gradient-to-br from-rose-50 to-pink-100 dark:from-rose-950/40 dark:to-pink-900/40",
+        iconPath: <><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></>
+    },
+    PAYPAY: {
+        color: "text-red-500 dark:text-red-400",
+        bgClass: "bg-gradient-to-br from-red-50 to-rose-100 dark:from-red-950/40 dark:to-rose-900/40",
+        iconPath: <><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></>
+    }
 };
 
 interface ResultViewProps {

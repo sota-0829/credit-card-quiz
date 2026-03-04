@@ -1,9 +1,12 @@
-export type ResultType = 'REWARD' | 'STATUS' | 'TRAVEL';
+export type ResultType = 'REWARD' | 'STATUS' | 'TRAVEL' | 'CONVENIENCE' | 'AMAZON' | 'PAYPAY';
 
 export interface Score {
   REWARD: number;
   STATUS: number;
   TRAVEL: number;
+  CONVENIENCE: number;
+  AMAZON: number;
+  PAYPAY: number;
 }
 
 export interface Option {
@@ -43,47 +46,47 @@ export interface ResultData {
 export const questions: Question[] = [
   {
     id: 1,
-    title: "月のクレジットカード決済額はどれくらいですか？",
+    title: "月のクレジットカードのおおよその決済額はどれくらいですか？",
     options: [
-      { text: "10万円未満", points: { REWARD: 2, STATUS: 0, TRAVEL: 0 } },
-      { text: "10万円〜30万円", points: { REWARD: 1, STATUS: 1, TRAVEL: 1 } },
-      { text: "30万円以上", points: { REWARD: 0, STATUS: 2, TRAVEL: 2 } },
+      { text: "10万円未満", points: { REWARD: 0, STATUS: 1, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 1, PAYPAY: 1 } },
+      { text: "10万円〜30万円", points: { REWARD: 2, STATUS: 1, TRAVEL: 1, CONVENIENCE: 1, AMAZON: 2, PAYPAY: 2 } },
+      { text: "30万円以上", points: { REWARD: 1, STATUS: 0, TRAVEL: 3, CONVENIENCE: 0, AMAZON: 1, PAYPAY: 0 } },
     ],
   },
   {
     id: 2,
-    title: "出張や旅行の頻度はどの程度ですか？",
+    title: "出張や旅行に行く頻度はどの程度ですか？",
     options: [
-      { text: "ほとんど行かない", points: { REWARD: 2, STATUS: 1, TRAVEL: 0 } },
-      { text: "年に1〜2回程度", points: { REWARD: 1, STATUS: 2, TRAVEL: 1 } },
-      { text: "年に3回以上（よく行く）", points: { REWARD: 0, STATUS: 0, TRAVEL: 3 } },
+      { text: "ほとんど行かない", points: { REWARD: 1, STATUS: 0, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 2 } },
+      { text: "年に1〜2回程度", points: { REWARD: 2, STATUS: 2, TRAVEL: 1, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
+      { text: "年に3回以上（よく行く）", points: { REWARD: 0, STATUS: 1, TRAVEL: 3, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
     ],
   },
   {
     id: 3,
-    title: "クレジットカードに求める最も重要な要素はどれですか？",
+    title: "最もよく利用するお店・サービスは次のうちどれですか？",
     options: [
-      { text: "とにかくポイント還元率・実利主義", points: { REWARD: 3, STATUS: 0, TRAVEL: 0 } },
-      { text: "ラウンジ等の特典やステータス感", points: { REWARD: 0, STATUS: 3, TRAVEL: 1 } },
-      { text: "マイルの貯まりやすさ・旅行特典", points: { REWARD: 0, STATUS: 1, TRAVEL: 3 } },
+      { text: "コンビニやマクドナルドなどの飲食チェーン", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 4, AMAZON: 0, PAYPAY: 0 } },
+      { text: "Amazonやスターバックス", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 0, AMAZON: 4, PAYPAY: 0 } },
+      { text: "楽天市場やYahoo!ショッピング", points: { REWARD: 3, STATUS: 0, TRAVEL: 1, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 2 } },
     ],
   },
   {
     id: 4,
-    title: "貯めたい・よく使うポイント圏はどれですか？",
+    title: "普段お使いのスマホキャリアやメインのスマホ決済は？",
     options: [
-      { text: "楽天ポイントや共通ポイント", points: { REWARD: 2, STATUS: 0, TRAVEL: 0 } },
-      { text: "Vポイント等の銀行系・特になし", points: { REWARD: 1, STATUS: 2, TRAVEL: 0 } },
-      { text: "航空会社のマイル（ANA/JAL）", points: { REWARD: 0, STATUS: 0, TRAVEL: 3 } },
+      { text: "ソフトバンク/Y!mobile・PayPayをよく使う", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 4 } },
+      { text: "楽天モバイル・楽天ペイをよく使う", points: { REWARD: 3, STATUS: 0, TRAVEL: 2, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
+      { text: "特にこだわりはない・その他", points: { REWARD: 1, STATUS: 2, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 1 } },
     ],
   },
   {
     id: 5,
-    title: "クレジットカードの年会費の許容範囲は？",
+    title: "クレジットカードの「年会費」に対するお考えは？",
     options: [
-      { text: "絶対に無料がいい", points: { REWARD: 3, STATUS: 0, TRAVEL: 0 } },
-      { text: "1万円台なら出してもいい", points: { REWARD: 1, STATUS: 2, TRAVEL: 1 } },
-      { text: "数万円でも特典に見合うならOK", points: { REWARD: 0, STATUS: 3, TRAVEL: 2 } },
+      { text: "絶対に無料がいい", points: { REWARD: 2, STATUS: 1, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 2 } },
+      { text: "海外旅行保険等のサポートが欲しい（無料希望）", points: { REWARD: 0, STATUS: 3, TRAVEL: 0, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
+      { text: "数万円払ってでもラウンジ等の豪華な特権が欲しい", points: { REWARD: 0, STATUS: 0, TRAVEL: 4, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
     ],
   },
 ];
@@ -128,4 +131,31 @@ export const results: Record<ResultType, ResultData> = {
     affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918f0a.735b8dbe.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6NTUwOTk0LCJhbXAiOmZhbHNlfQ%3D%3D',
     campaignText: '✈️ 新規入会＆利用でポイントプレゼント中！',
   },
+  CONVENIENCE: {
+    type: 'CONVENIENCE',
+    title: 'コンビニ・ファストフード特化型',
+    cardName: '三井住友カード（NL）',
+    description: '対象のコンビニや飲食店でスマホの対象のタッチ決済を利用すると、最大7％還元という驚異的な還元率を誇る一枚。普段のちょっとした買い物が一番お得になる、現代人の必須カードです。',
+    features: ['対象店舗で最大7%還元', '年会費永年無料', 'ナンバーレスで万全のセキュリティ'],
+    affiliateLink: '#',
+    campaignText: '📱 新規入会＆利用で最大ポイントプレゼント！',
+  },
+  AMAZON: {
+    type: 'AMAZON',
+    title: 'Amazon・スタバ特化型',
+    cardName: 'JCB CARD W',
+    description: 'Amazonやスターバックスなどの「JCBオリジナルシリーズパートナー」店舗でポイントが倍増する39歳以下限定の特化カード。年会費も永年無料です。',
+    features: ['Amazonやスタバでポイント高還元', '年会費永年無料（39歳以下限定）', '貯めたポイントは直接Amazonで使える'],
+    affiliateLink: '#',
+    campaignText: '🎁 Amazon.co.jpご利用分がキャッシュバック！',
+  },
+  PAYPAY: {
+    type: 'PAYPAY',
+    title: 'スマホ・QR決済経済圏型',
+    cardName: 'PayPayカード',
+    description: '日本中で使える「PayPay」にチャージできる唯一のクレジットカード。SoftBankやY!mobileユーザーならさらにポイントがザクザク貯まる、経済圏特化の最強カードです。',
+    features: ['PayPayポイントがどんどん貯まる', '年会費永年無料', 'Yahoo!ショッピングでいつでも高還元'],
+    affiliateLink: '#',
+    campaignText: '🔥 新規入会でPayPayポイント大量プレゼント中！',
+  }
 };

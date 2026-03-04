@@ -203,6 +203,41 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                 </div>
             )}
 
+            {/* Bonus Monetization: DMM FX Sponsor Banner */}
+            <div className="w-full max-w-3xl mx-auto mt-12 mb-8 animate-in fade-in duration-1000 delay-500">
+                <div className="relative p-[2px] rounded-2xl bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:shadow-xl transition-all hover:scale-[1.02]">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-500 to-red-500 text-white text-xs font-black px-4 py-1 rounded-full shadow-md z-10 whitespace-nowrap">
+                        SPONSORED
+                    </div>
+                    <div className="bg-white dark:bg-slate-900 rounded-[14px] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 relative z-0">
+                        <div className="relative shrink-0 w-[165px] h-[120px] rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-inner">
+                            <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K8+1PX3OY+1WP2+6F9M9" rel="nofollow" target="_blank">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img width="165" height="120" alt="" src="https://www27.a8.net/svt/bgt?aid=260304920104&wid=001&eno=01&mid=s00000008903001079000&mc=1" className="w-full h-full object-cover" />
+                            </a>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4AZ8K8+1PX3OY+1WP2+6F9M9" alt="" className="hidden" />
+                        </div>
+                        <div className="text-center md:text-left flex-grow">
+                            <h3 className="text-xl font-black text-slate-900 dark:text-white mb-2 leading-tight">
+                                クレカを作ったら、次は「投資デビュー」しませんか？
+                            </h3>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                                DMM FXなら初心者でも最短1時間で取引スタート！お得なキャッシュバックキャンペーンで投資元本をブーストさせるチャンスです。審査待ちの今のうちにチェック👇
+                            </p>
+                            <a
+                                href="https://px.a8.net/svt/ejp?a8mat=4AZ8K8+1PX3OY+1WP2+6F9M9"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                                className="inline-block bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-500 hover:to-orange-400 text-white font-bold py-3 px-8 rounded-full shadow-md transition-all active:scale-95 text-sm"
+                            >
+                                キャンペーンの詳細を見る
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* M-3: SNS Share Section */}
             <div className="flex flex-col items-center gap-4 mt-8">
                 <p className="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-wide uppercase">診断結果をシェアする</p>

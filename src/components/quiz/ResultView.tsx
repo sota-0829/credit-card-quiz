@@ -253,6 +253,41 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                 </div>
             </div>
 
+            {/* Bonus Monetization 2: GMO / Onamae.com */}
+            <div className="w-full max-w-3xl mx-auto mt-6 mb-8 animate-in fade-in duration-1000 delay-700">
+                <div className="relative p-[2px] rounded-2xl bg-gradient-to-r from-blue-400 via-cyan-500 to-indigo-500 hover:shadow-xl transition-all hover:scale-[1.02]">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xs font-black px-4 py-1 rounded-full shadow-md z-10 whitespace-nowrap">
+                        SPONSORED
+                    </div>
+                    <div className="bg-white dark:bg-slate-900 rounded-[14px] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 relative z-0">
+                        <div className="relative shrink-0 w-[120px] rounded-xl overflow-hidden shadow-inner flex justify-center bg-white border border-slate-100 dark:border-slate-800">
+                            <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K8+1R3YWI+50+2HGLCX" rel="nofollow" target="_blank" className="block w-full max-h-[160px] overflow-hidden">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img width="120" height="600" alt="" src="https://www21.a8.net/svt/bgt?aid=260304920106&wid=001&eno=01&mid=s00000000018015026000&mc=1" className="w-full object-cover object-top" />
+                            </a>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4AZ8K8+1R3YWI+50+2HGLCX" alt="" className="hidden" />
+                        </div>
+                        <div className="text-center md:text-left flex-grow">
+                            <h3 className="text-xl font-black text-slate-900 dark:text-white mb-2 leading-tight">
+                                クレカを作ったら、お得な体験を「ブログで発信」しませんか？
+                            </h3>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
+                                国内シェアNo.1の「お名前.com」ならたった数分で独自ドメインが取得でき、すぐに副業ブログを開設できます！まずは希望のドメインが空いているかチェック👇
+                            </p>
+                            <a
+                                href="https://px.a8.net/svt/ejp?a8mat=4AZ8K8+1R3YWI+50+2HGLCX"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                                className="inline-block bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold py-3 px-8 rounded-full shadow-md transition-all active:scale-95 text-sm"
+                            >
+                                \ 1円〜！/ ドメインを探す
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* M-3: SNS Share Section */}
             <div className="flex flex-col items-center gap-4 mt-8">
                 <p className="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-wide uppercase">診断結果をシェアする</p>

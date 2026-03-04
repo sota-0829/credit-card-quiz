@@ -95,8 +95,17 @@ export const results: Record<ResultType, ResultData> = {
     cardName: '楽天プレミアムカード（または楽天カード）',
     description: 'あなたは徹底した実利主義のエンジニア。無駄なくザクザクポイントが貯まり、すぐに生活費やガジェット購入に充てられる高還元率カードが最適です。',
     features: ['どこでも高還元率', '貯まったポイントが使いやすい', '年会費の元がすぐ取れる'],
-    affiliateLink: 'https://px.a8.net/svt/ejp?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH', // Note: Derived from the tracking pixel
+    affiliateLink: '#',
     campaignText: '🎉 もれなく新規入会で最大10,000ポイントプレゼント中！',
+  },
+  STATUS: {
+    type: 'STATUS',
+    title: '無料＆手厚い保険・サブカード型',
+    cardName: 'エポスカード',
+    description: 'メインのカードとは別に、持っているだけで安心と恩恵を受けられる優秀なサブカードです。年会費が永年無料で、特に充実した海外旅行傷害保険などの特典が魅力です。',
+    features: ['年会費が永年無料', '充実の海外旅行傷害保険が自動付帯', '全国の飲食店や施設で優待割引'],
+    affiliateLink: 'https://px.a8.net/svt/ejp?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH',
+    campaignText: '✨ 新規入会で2,000円相当のエポスポイントプレゼント！',
     adScript: {
       id: 'div_admane_async_1734_658_2971',
       site: '1734',
@@ -109,15 +118,6 @@ export const results: Record<ResultType, ResultData> = {
       code2: '4AZ8K8+3YW1YQ+38L8+BXQOH'
     },
     adPixel: 'https://www10.a8.net/0.gif?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH'
-  },
-  STATUS: {
-    type: 'STATUS',
-    title: 'ステータス・特化型',
-    cardName: '三井住友カード プラチナプリファード',
-    description: 'ステータスと効率を両立したいあなたには、特化型プラチナカードがベスト。コンシェルジュやラウンジなど、ワンランク上の体験と高還元を兼ね備えています。',
-    features: ['特約店での驚異的な還元率', '充実した付帯保険とラウンジ', '洗練された券面デザイン'],
-    affiliateLink: '#',
-    campaignText: '✨ 当サイト限定！初年度年会費相当のポイント還元キャンペーン！',
   },
   TRAVEL: {
     type: 'TRAVEL',

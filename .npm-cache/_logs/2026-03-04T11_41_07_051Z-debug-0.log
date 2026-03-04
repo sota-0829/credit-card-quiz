@@ -1,0 +1,1039 @@
+0 verbose cli /opt/homebrew/Cellar/node/25.7.0/bin/node /opt/homebrew/bin/npm
+1 info using npm@11.10.1
+2 info using node@v25.7.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/ishidasouta/antigravity/aferiate_clean/.npmrc
+5 silly config load:file:/Users/ishidasouta/.npmrc
+6 silly config load:file:/opt/homebrew/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/Users/ishidasouta/antigravity/aferiate_clean/.npm-cache/_logs/2026-03-04T11_41_07_051Z-
+10 verbose logfile /Users/ishidasouta/antigravity/aferiate_clean/.npm-cache/_logs/2026-03-04T11_41_07_051Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 silly idealTree buildDeps
+15 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/acorn' ]
+16 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/ajv' ]
+17 silly reify mark retired [
+17 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/aria-query'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/axe-core'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/axobject-query'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/baseline-browser-mapping'
+20 silly reify ]
+21 silly reify mark retired [
+21 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/caniuse-lite'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/cross-spawn'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/enhanced-resolve'
+23 silly reify ]
+24 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint' ]
+25 silly reify mark retired [
+25 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/es-abstract'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/es-iterator-helpers'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/fast-glob'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-plugin-react'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/flatted'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-plugin-import'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-plugin-jsx-a11y'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/hermes-parser'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/has-tostringtag'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/has-symbols'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/hermes-estree'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/js-yaml'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/json-schema-traverse'
+37 silly reify ]
+38 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/jsesc' ]
+39 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/jiti' ]
+40 silly reify mark retired [
+40 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/jsx-ast-utils'
+40 silly reify ]
+41 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/json5' ]
+42 silly reify mark retired [
+42 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/language-subtag-registry'
+42 silly reify ]
+43 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/nanoid' ]
+44 silly reify mark retired [
+44 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/napi-postinstall'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/node-releases'
+45 silly reify ]
+46 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/next' ]
+47 silly reify mark retired [
+47 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/object-inspect'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/react-dom'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/resolve'
+49 silly reify ]
+50 silly reify mark retired [
+50 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/reusify'
+50 silly reify ]
+51 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/semver' ]
+52 silly reify mark retired [
+52 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/string.prototype.includes'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/styled-jsx'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/typescript'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/typescript-eslint'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tsconfig-paths'
+56 silly reify ]
+57 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/which' ]
+58 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/zod' ]
+59 silly reify mark retired [
+59 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/compat-data'
+59 silly reify ]
+60 silly reify mark retired [
+60 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/core'
+60 silly reify ]
+61 silly reify mark retired [
+61 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/generator'
+61 silly reify ]
+62 silly reify mark retired [
+62 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/helper-compilation-targets'
+62 silly reify ]
+63 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/uri-js' ]
+64 silly reify mark retired [
+64 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/helper-module-transforms'
+64 silly reify ]
+65 silly reify mark retired [
+65 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/helper-string-parser'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/parser'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/template'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/traverse'
+68 silly reify ]
+69 silly reify mark retired [
+69 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/helpers'
+69 silly reify ]
+70 silly reify mark retired [
+70 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/types'
+70 silly reify ]
+71 silly reify mark retired [
+71 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/config-array'
+71 silly reify ]
+72 silly reify mark retired [
+72 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/config-helpers'
+72 silly reify ]
+73 silly reify mark retired [
+73 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/core'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/eslintrc'
+74 silly reify ]
+75 silly reify mark retired [
+75 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/js'
+75 silly reify ]
+76 silly reify mark retired [
+76 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/object-schema'
+76 silly reify ]
+77 silly reify mark retired [
+77 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/plugin-kit'
+77 silly reify ]
+78 silly reify mark retired [
+78 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@jridgewell/gen-mapping'
+78 silly reify ]
+79 silly reify mark retired [
+79 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@img/sharp-libvips-darwin-arm64'
+79 silly reify ]
+80 silly reify mark retired [
+80 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@next/eslint-plugin-next'
+80 silly reify ]
+81 silly reify mark retired [
+81 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/fs.scandir'
+81 silly reify ]
+82 silly reify mark retired [
+82 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/fs.walk'
+82 silly reify ]
+83 silly reify mark retired [
+83 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@jridgewell/resolve-uri'
+83 silly reify ]
+84 silly reify mark retired [
+84 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@swc/helpers'
+84 silly reify ]
+85 silly reify mark retired [
+85 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@napi-rs/wasm-runtime'
+85 silly reify ]
+86 silly reify mark retired [
+86 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@tybys/wasm-util'
+86 silly reify ]
+87 silly reify mark retired [
+87 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/fs.stat'
+87 silly reify ]
+88 silly reify mark retired [
+88 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/eslint-plugin'
+88 silly reify ]
+89 silly reify mark retired [
+89 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/parser'
+89 silly reify ]
+90 silly reify mark retired [
+90 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/project-service'
+90 silly reify ]
+91 silly reify mark retired [
+91 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/tsconfig-utils'
+91 silly reify ]
+92 silly reify mark retired [
+92 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/scope-manager'
+92 silly reify ]
+93 silly reify mark retired [
+93 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/type-utils'
+93 silly reify ]
+94 silly reify mark retired [
+94 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/types'
+94 silly reify ]
+95 silly reify mark retired [
+95 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/typescript-estree'
+95 silly reify ]
+96 silly reify mark retired [
+96 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/utils'
+96 silly reify ]
+97 silly reify mark retired [
+97 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/visitor-keys'
+97 silly reify ]
+98 silly reify mark retired [
+98 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/browserslist',
+98 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/browserslist'
+98 silly reify ]
+99 silly reify mark retired [ '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/clsx' ]
+100 silly reify mark retired [
+100 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-import-resolver-node/node_modules/debug'
+100 silly reify ]
+101 silly reify mark retired [
+101 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-module-utils/node_modules/debug'
+101 silly reify ]
+102 silly reify mark retired [
+102 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/is-bun-module/node_modules/semver'
+102 silly reify ]
+103 silly reify mark retired [
+103 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/loose-envify',
+103 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/loose-envify'
+103 silly reify ]
+104 silly reify mark retired [
+104 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/sharp/node_modules/semver'
+104 silly reify ]
+105 silly reify mark retired [
+105 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tinyglobby/node_modules/fdir'
+105 silly reify ]
+106 silly reify mark retired [
+106 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tinyglobby/node_modules/picomatch'
+106 silly reify ]
+107 silly reify mark retired [
+107 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tailwind-merge'
+107 silly reify ]
+108 silly reify mark retired [
+108 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys'
+108 silly reify ]
+109 silly reify mark retired [
+109 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/update-browserslist-db',
+109 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/update-browserslist-db'
+109 silly reify ]
+110 silly reify moves {
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/acorn': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.acorn-lRqcWDoV',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/ajv': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.ajv-0mHo38Xh',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/aria-query': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.aria-query-8hee8yRr',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/axe-core': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.axe-core-L5vvvIV9',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/axobject-query': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.axobject-query-pm6Nu9Zl',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/baseline-browser-mapping': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.baseline-browser-mapping-TxrUTKVQ',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/caniuse-lite': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.caniuse-lite-iKeJeVYI',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/cross-spawn': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.cross-spawn-HwGMp13s',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/enhanced-resolve': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.enhanced-resolve-aC4QoFjq',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.eslint-Njj59LoF',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/es-abstract': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.es-abstract-Mmrnd2I1',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/es-iterator-helpers': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.es-iterator-helpers-rRlx1QLt',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/fast-glob': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.fast-glob-kGbhHrgZ',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-plugin-react': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.eslint-plugin-react-ozG7OFNe',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/flatted': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.flatted-BJFVEmIq',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-plugin-import': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.eslint-plugin-import-kAgENrQr',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-plugin-jsx-a11y': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.eslint-plugin-jsx-a11y-aQ8Sc42h',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/hermes-parser': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.hermes-parser-qZX3x9r3',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/has-tostringtag': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.has-tostringtag-vJt31C2q',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/has-symbols': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.has-symbols-EWzILr1I',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/hermes-estree': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.hermes-estree-z8N4Mgcn',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/js-yaml': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.js-yaml-noWWvgRQ',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/json-schema-traverse': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.json-schema-traverse-7TqhHPxa',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/jsesc': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.jsesc-7NTIEtJf',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/jiti': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.jiti-kzw5dlsq',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/jsx-ast-utils': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.jsx-ast-utils-FcfjUlDy',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/json5': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.json5-jCE7Ym6c',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/language-subtag-registry': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.language-subtag-registry-cokvzAT8',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/nanoid': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.nanoid-LEzqQbC2',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/napi-postinstall': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.napi-postinstall-Se2Zl6Nn',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/node-releases': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.node-releases-OGItcxKQ',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/next': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.next-iZjhGIlV',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/object-inspect': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.object-inspect-n5nzoPto',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/react-dom': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.react-dom-NrAAHtb1',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/resolve': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.resolve-2YCVMRZO',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/reusify': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.reusify-xGpLQwb5',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/semver': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.semver-masq53HN',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/string.prototype.includes': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.string.prototype.includes-CclBHoHI',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/styled-jsx': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.styled-jsx-UYeqFNIs',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/typescript': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.typescript-XEedmOHi',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/typescript-eslint': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.typescript-eslint-NXLSnIlU',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tsconfig-paths': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.tsconfig-paths-CaqiU7DT',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/which': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.which-5E0NxL9r',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/zod': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.zod-M3MPijV0',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/compat-data': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.compat-data-RzvYtibp',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/core': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.core-7JfIKhBH',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/generator': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.generator-5kw0iU7e',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/helper-compilation-targets': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.helper-compilation-targets-KleBjOb5',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/uri-js': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.uri-js-AON19iIF',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/helper-module-transforms': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.helper-module-transforms-UXme1O7O',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/helper-string-parser': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.helper-string-parser-e9st0pYz',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/parser': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.parser-aOtQj0Zb',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/template': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.template-tCwplaGv',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/traverse': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.traverse-7Ruy78U8',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/helpers': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.helpers-2oleEpUG',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/types': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@babel/.types-iLw5K9VF',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/config-array': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/.config-array-uxu1pbTw',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/config-helpers': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/.config-helpers-5EjAYhs6',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/core': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/.core-OoxhuEBn',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/eslintrc': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/.eslintrc-ytwdPsWv',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/js': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/.js-UoUZDtAb',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/object-schema': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/.object-schema-0v7aVpAP',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/plugin-kit': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint/.plugin-kit-BRu3QmuO',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@jridgewell/gen-mapping': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@jridgewell/.gen-mapping-pqgsYGY4',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@img/sharp-libvips-darwin-arm64': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@img/.sharp-libvips-darwin-arm64-KW6ZKoqA',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@next/eslint-plugin-next': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@next/.eslint-plugin-next-NJZzOag7',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/fs.scandir': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/.fs.scandir-jvwVA0jh',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/fs.walk': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/.fs.walk-nE2lTeUc',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@jridgewell/resolve-uri': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@jridgewell/.resolve-uri-k6hy0rz3',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@swc/helpers': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@swc/.helpers-hTdZdV64',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@napi-rs/wasm-runtime': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@napi-rs/.wasm-runtime-qtSYV1xH',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@tybys/wasm-util': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@tybys/.wasm-util-jznI9TRv',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/fs.stat': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@nodelib/.fs.stat-GmkoFecd',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/eslint-plugin': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.eslint-plugin-1oA91CZM',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/parser': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.parser-AwjUR9oQ',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/project-service': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.project-service-i5bJWoef',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/tsconfig-utils': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.tsconfig-utils-Ws1iNjQV',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/scope-manager': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.scope-manager-iy3gsCo0',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/type-utils': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.type-utils-fEcAV2bz',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/types': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.types-nGAvx3su',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/typescript-estree': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.typescript-estree-0AhLN1oB',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/utils': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.utils-mE3HRWDS',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/visitor-keys': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@typescript-eslint/.visitor-keys-SLMeAB4R',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/browserslist': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.browserslist-J1dNvIfw',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/browserslist': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/.browserslist-zy7rY8ZH',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/clsx': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.clsx-45p4t77u',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-import-resolver-node/node_modules/debug': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-import-resolver-node/node_modules/.debug-nHZvpPcJ',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-module-utils/node_modules/debug': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/eslint-module-utils/node_modules/.debug-Ke1Ss6An',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/is-bun-module/node_modules/semver': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/is-bun-module/node_modules/.semver-kkHw0AZT',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/loose-envify': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.loose-envify-Y3Qcekvf',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/loose-envify': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/.loose-envify-XwvmEusa',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/sharp/node_modules/semver': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/sharp/node_modules/.semver-fHDreLbS',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tinyglobby/node_modules/fdir': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tinyglobby/node_modules/.fdir-raUoje8o',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tinyglobby/node_modules/picomatch': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tinyglobby/node_modules/.picomatch-Sv3zCPFG',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/tailwind-merge': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.tailwind-merge-uFYojJal',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/@eslint-community/eslint-utils/node_modules/.eslint-visitor-keys-MUG0agaI',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/update-browserslist-db': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.update-browserslist-db-sdlvFLq1',
+110 silly reify   '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/update-browserslist-db': '/Users/ishidasouta/antigravity/aferiate_clean/node_modules/.bin/.update-browserslist-db-cS5VJiWV'
+110 silly reify }
+111 silly audit bulk request {
+111 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+111 silly audit   '@babel/code-frame': [ '7.29.0' ],
+111 silly audit   '@babel/compat-data': [ '7.29.0' ],
+111 silly audit   '@babel/core': [ '7.29.0' ],
+111 silly audit   '@babel/generator': [ '7.29.1' ],
+111 silly audit   '@babel/helper-compilation-targets': [ '7.28.6' ],
+111 silly audit   '@babel/helper-globals': [ '7.28.0' ],
+111 silly audit   '@babel/helper-module-imports': [ '7.28.6' ],
+111 silly audit   '@babel/helper-module-transforms': [ '7.28.6' ],
+111 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+111 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+111 silly audit   '@babel/helper-validator-option': [ '7.27.1' ],
+111 silly audit   '@babel/helpers': [ '7.28.6' ],
+111 silly audit   '@babel/parser': [ '7.29.0' ],
+111 silly audit   '@babel/template': [ '7.28.6' ],
+111 silly audit   '@babel/traverse': [ '7.29.0' ],
+111 silly audit   '@babel/types': [ '7.29.0' ],
+111 silly audit   '@emnapi/core': [ '1.8.1' ],
+111 silly audit   '@emnapi/runtime': [ '1.8.1' ],
+111 silly audit   '@emnapi/wasi-threads': [ '1.1.0' ],
+111 silly audit   '@eslint-community/eslint-utils': [ '4.9.1' ],
+111 silly audit   'eslint-visitor-keys': [ '3.4.3', '5.0.1', '4.2.1' ],
+111 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+111 silly audit   '@eslint/config-array': [ '0.21.1' ],
+111 silly audit   '@eslint/config-helpers': [ '0.4.2' ],
+111 silly audit   '@eslint/core': [ '0.17.0' ],
+111 silly audit   '@eslint/eslintrc': [ '3.3.4' ],
+111 silly audit   '@eslint/js': [ '9.39.3' ],
+111 silly audit   '@eslint/object-schema': [ '2.1.7' ],
+111 silly audit   '@eslint/plugin-kit': [ '0.4.1' ],
+111 silly audit   '@humanfs/core': [ '0.19.1' ],
+111 silly audit   '@humanfs/node': [ '0.16.7' ],
+111 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+111 silly audit   '@humanwhocodes/retry': [ '0.4.3' ],
+111 silly audit   '@img/colour': [ '1.1.0' ],
+111 silly audit   '@img/sharp-darwin-arm64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-darwin-x64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.4' ],
+111 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.4' ],
+111 silly audit   '@img/sharp-linux-arm': [ '0.34.5' ],
+111 silly audit   '@img/sharp-linux-arm64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-linux-ppc64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-linux-riscv64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-linux-s390x': [ '0.34.5' ],
+111 silly audit   '@img/sharp-linux-x64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-wasm32': [ '0.34.5' ],
+111 silly audit   '@img/sharp-win32-arm64': [ '0.34.5' ],
+111 silly audit   '@img/sharp-win32-ia32': [ '0.34.5' ],
+111 silly audit   '@img/sharp-win32-x64': [ '0.34.5' ],
+111 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+111 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+111 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+111 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+111 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+111 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12' ],
+111 silly audit   '@next/env': [ '16.1.6' ],
+111 silly audit   '@next/eslint-plugin-next': [ '16.1.6' ],
+111 silly audit   '@next/swc-darwin-arm64': [ '16.1.6' ],
+111 silly audit   '@next/swc-darwin-x64': [ '16.1.6' ],
+111 silly audit   '@next/swc-linux-arm64-gnu': [ '16.1.6' ],
+111 silly audit   '@next/swc-linux-arm64-musl': [ '16.1.6' ],
+111 silly audit   '@next/swc-linux-x64-gnu': [ '16.1.6' ],
+111 silly audit   '@next/swc-linux-x64-musl': [ '16.1.6' ],
+111 silly audit   '@next/swc-win32-arm64-msvc': [ '16.1.6' ],
+111 silly audit   '@next/swc-win32-x64-msvc': [ '16.1.6' ],
+111 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+111 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+111 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+111 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+111 silly audit   '@rtsao/scc': [ '1.1.0' ],
+111 silly audit   '@swc/helpers': [ '0.5.15' ],
+111 silly audit   '@tailwindcss/node': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.2.1' ],
+111 silly audit   '@tailwindcss/postcss': [ '4.2.1' ],
+111 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+111 silly audit   '@types/estree': [ '1.0.8' ],
+111 silly audit   '@types/json-schema': [ '7.0.15' ],
+111 silly audit   '@types/json5': [ '0.0.29' ],
+111 silly audit   '@types/node': [ '20.19.35' ],
+111 silly audit   '@types/react': [ '19.2.14' ],
+111 silly audit   '@types/react-dom': [ '19.2.3' ],
+111 silly audit   '@typescript-eslint/eslint-plugin': [ '8.56.1' ],
+111 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+111 silly audit   '@typescript-eslint/parser': [ '8.56.1' ],
+111 silly audit   '@typescript-eslint/project-service': [ '8.56.1' ],
+111 silly audit   '@typescript-eslint/scope-manager': [ '8.56.1' ],
+111 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.56.1' ],
+111 silly audit   '@typescript-eslint/type-utils': [ '8.56.1' ],
+111 silly audit   '@typescript-eslint/types': [ '8.56.1' ],
+111 silly audit   '@typescript-eslint/typescript-estree': [ '8.56.1' ],
+111 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+111 silly audit   'brace-expansion': [ '5.0.4', '1.1.12' ],
+111 silly audit   minimatch: [ '10.2.4', '3.1.5' ],
+111 silly audit   semver: [ '7.7.4', '6.3.1' ],
+111 silly audit   '@typescript-eslint/utils': [ '8.56.1' ],
+111 silly audit   '@typescript-eslint/visitor-keys': [ '8.56.1' ],
+111 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.11.1' ],
+111 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.11.1' ],
+111 silly audit   acorn: [ '8.16.0' ],
+111 silly audit   'acorn-jsx': [ '5.3.2' ],
+111 silly audit   ajv: [ '6.14.0' ],
+111 silly audit   'ansi-styles': [ '4.3.0' ],
+111 silly audit   argparse: [ '2.0.1' ],
+111 silly audit   'aria-query': [ '5.3.2' ],
+111 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+111 silly audit   'array-includes': [ '3.1.9' ],
+111 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+111 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+111 silly audit   'array.prototype.flat': [ '1.3.3' ],
+111 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+111 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+111 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+111 silly audit   'ast-types-flow': [ '0.0.8' ],
+111 silly audit   'async-function': [ '1.0.0' ],
+111 silly audit   'available-typed-arrays': [ '1.0.7' ],
+111 silly audit   'axe-core': [ '4.11.1' ],
+111 silly audit   'axobject-query': [ '4.1.0' ],
+111 silly audit   'baseline-browser-mapping': [ '2.10.0' ],
+111 silly audit   braces: [ '3.0.3' ],
+111 silly audit   browserslist: [ '4.28.1' ],
+111 silly audit   'call-bind': [ '1.0.8' ],
+111 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+111 silly audit   'call-bound': [ '1.0.4' ],
+111 silly audit   callsites: [ '3.1.0' ],
+111 silly audit   'caniuse-lite': [ '1.0.30001776' ],
+111 silly audit   chalk: [ '4.1.2' ],
+111 silly audit   'client-only': [ '0.0.1' ],
+111 silly audit   'color-convert': [ '2.0.1' ],
+111 silly audit   'color-name': [ '1.1.4' ],
+111 silly audit   'concat-map': [ '0.0.1' ],
+111 silly audit   'convert-source-map': [ '2.0.0' ],
+111 silly audit   'cross-spawn': [ '7.0.6' ],
+111 silly audit   csstype: [ '3.2.3' ],
+111 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+111 silly audit   'data-view-buffer': [ '1.0.2' ],
+111 silly audit   'data-view-byte-length': [ '1.0.2' ],
+111 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+111 silly audit   debug: [ '4.4.3', '3.2.7' ],
+111 silly audit   'deep-is': [ '0.1.4' ],
+111 silly audit   'define-data-property': [ '1.1.4' ],
+111 silly audit   'define-properties': [ '1.2.1' ],
+111 silly audit   'detect-libc': [ '2.1.2' ],
+111 silly audit   doctrine: [ '2.1.0' ],
+111 silly audit   'dunder-proto': [ '1.0.1' ],
+111 silly audit   'electron-to-chromium': [ '1.5.307' ],
+111 silly audit   'emoji-regex': [ '9.2.2' ],
+111 silly audit   'enhanced-resolve': [ '5.20.0' ],
+111 silly audit   'es-abstract': [ '1.24.1' ],
+111 silly audit   'es-define-property': [ '1.0.1' ],
+111 silly audit   'es-errors': [ '1.3.0' ],
+111 silly audit   'es-iterator-helpers': [ '1.2.2' ],
+111 silly audit   'es-object-atoms': [ '1.1.1' ],
+111 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+111 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+111 silly audit   'es-to-primitive': [ '1.3.0' ],
+111 silly audit   escalade: [ '3.2.0' ],
+111 silly audit   'escape-string-regexp': [ '4.0.0' ],
+111 silly audit   eslint: [ '9.39.3' ],
+111 silly audit   'eslint-config-next': [ '16.1.6' ],
+111 silly audit   globals: [ '16.4.0', '14.0.0' ],
+111 silly audit   'eslint-import-resolver-node': [ '0.3.9' ],
+111 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+111 silly audit   'eslint-module-utils': [ '2.12.1' ],
+111 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+111 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+111 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+111 silly audit   'eslint-plugin-react-hooks': [ '7.0.1' ],
+111 silly audit   resolve: [ '2.0.0-next.6', '1.22.11' ],
+111 silly audit   'eslint-scope': [ '8.4.0' ],
+111 silly audit   espree: [ '10.4.0' ],
+111 silly audit   esquery: [ '1.7.0' ],
+111 silly audit   esrecurse: [ '4.3.0' ],
+111 silly audit   estraverse: [ '5.3.0' ],
+111 silly audit   esutils: [ '2.0.3' ],
+111 silly audit   'fast-deep-equal': [ '3.1.3' ],
+111 silly audit   'fast-glob': [ '3.3.1' ],
+111 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+111 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+111 silly audit   'fast-levenshtein': [ '2.0.6' ],
+111 silly audit   fastq: [ '1.20.1' ],
+111 silly audit   'file-entry-cache': [ '8.0.0' ],
+111 silly audit   'fill-range': [ '7.1.1' ],
+111 silly audit   'find-up': [ '5.0.0' ],
+111 silly audit   'flat-cache': [ '4.0.1' ],
+111 silly audit   flatted: [ '3.3.4' ],
+111 silly audit   'for-each': [ '0.3.5' ],
+111 silly audit   'function-bind': [ '1.1.2' ],
+111 silly audit   'function.prototype.name': [ '1.1.8' ],
+111 silly audit   'functions-have-names': [ '1.2.3' ],
+111 silly audit   'generator-function': [ '2.0.1' ],
+111 silly audit   gensync: [ '1.0.0-beta.2' ],
+111 silly audit   'get-intrinsic': [ '1.3.0' ],
+111 silly audit   'get-proto': [ '1.0.1' ],
+111 silly audit   'get-symbol-description': [ '1.1.0' ],
+111 silly audit   'get-tsconfig': [ '4.13.6' ],
+111 silly audit   globalthis: [ '1.0.4' ],
+111 silly audit   gopd: [ '1.2.0' ],
+111 silly audit   'graceful-fs': [ '4.2.11' ],
+111 silly audit   'has-bigints': [ '1.1.0' ],
+111 silly audit   'has-flag': [ '4.0.0' ],
+111 silly audit   'has-property-descriptors': [ '1.0.2' ],
+111 silly audit   'has-proto': [ '1.2.0' ],
+111 silly audit   'has-symbols': [ '1.1.0' ],
+111 silly audit   'has-tostringtag': [ '1.0.2' ],
+111 silly audit   hasown: [ '2.0.2' ],
+111 silly audit   'hermes-estree': [ '0.25.1' ],
+111 silly audit   'hermes-parser': [ '0.25.1' ],
+111 silly audit   'import-fresh': [ '3.3.1' ],
+111 silly audit   imurmurhash: [ '0.1.4' ],
+111 silly audit   'internal-slot': [ '1.1.0' ],
+111 silly audit   'is-array-buffer': [ '3.0.5' ],
+111 silly audit   'is-async-function': [ '2.1.1' ],
+111 silly audit   'is-bigint': [ '1.1.0' ],
+111 silly audit   'is-boolean-object': [ '1.2.2' ],
+111 silly audit   'is-bun-module': [ '2.0.0' ],
+111 silly audit   'is-callable': [ '1.2.7' ],
+111 silly audit   'is-core-module': [ '2.16.1' ],
+111 silly audit   'is-data-view': [ '1.0.2' ],
+111 silly audit   'is-date-object': [ '1.1.0' ],
+111 silly audit   'is-extglob': [ '2.1.1' ],
+111 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+111 silly audit   'is-generator-function': [ '1.1.2' ],
+111 silly audit   'is-glob': [ '4.0.3' ],
+111 silly audit   'is-map': [ '2.0.3' ],
+111 silly audit   'is-negative-zero': [ '2.0.3' ],
+111 silly audit   'is-number': [ '7.0.0' ],
+111 silly audit   'is-number-object': [ '1.1.1' ],
+111 silly audit   'is-regex': [ '1.2.1' ],
+111 silly audit   'is-set': [ '2.0.3' ],
+111 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+111 silly audit   'is-string': [ '1.1.1' ],
+111 silly audit   'is-symbol': [ '1.1.1' ],
+111 silly audit   'is-typed-array': [ '1.1.15' ],
+111 silly audit   'is-weakmap': [ '2.0.2' ],
+111 silly audit   'is-weakref': [ '1.1.1' ],
+111 silly audit   'is-weakset': [ '2.0.4' ],
+111 silly audit   isarray: [ '2.0.5' ],
+111 silly audit   isexe: [ '2.0.0' ],
+111 silly audit   'iterator.prototype': [ '1.1.5' ],
+111 silly audit   jiti: [ '2.6.1' ],
+111 silly audit   'js-tokens': [ '4.0.0' ],
+111 silly audit   'js-yaml': [ '4.1.1' ],
+111 silly audit   jsesc: [ '3.1.0' ],
+111 silly audit   'json-buffer': [ '3.0.1' ],
+111 silly audit   'json-schema-traverse': [ '0.4.1' ],
+111 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+111 silly audit   json5: [ '2.2.3', '1.0.2' ],
+111 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+111 silly audit   keyv: [ '4.5.4' ],
+111 silly audit   'language-subtag-registry': [ '0.3.23' ],
+111 silly audit   'language-tags': [ '1.0.9' ],
+111 silly audit   levn: [ '0.4.1' ],
+111 silly audit   lightningcss: [ '1.31.1' ],
+111 silly audit   'lightningcss-android-arm64': [ '1.31.1' ],
+111 silly audit   'lightningcss-darwin-arm64': [ '1.31.1' ],
+111 silly audit   'lightningcss-darwin-x64': [ '1.31.1' ],
+111 silly audit   'lightningcss-freebsd-x64': [ '1.31.1' ],
+111 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.31.1' ],
+111 silly audit   'lightningcss-linux-arm64-gnu': [ '1.31.1' ],
+111 silly audit   'lightningcss-linux-arm64-musl': [ '1.31.1' ],
+111 silly audit   'lightningcss-linux-x64-gnu': [ '1.31.1' ],
+111 silly audit   'lightningcss-linux-x64-musl': [ '1.31.1' ],
+111 silly audit   'lightningcss-win32-arm64-msvc': [ '1.31.1' ],
+111 silly audit   'lightningcss-win32-x64-msvc': [ '1.31.1' ],
+111 silly audit   'locate-path': [ '6.0.0' ],
+111 silly audit   'lodash.merge': [ '4.6.2' ],
+111 silly audit   'loose-envify': [ '1.4.0' ],
+111 silly audit   'lru-cache': [ '5.1.1' ],
+111 silly audit   'magic-string': [ '0.30.21' ],
+111 silly audit   'math-intrinsics': [ '1.1.0' ],
+111 silly audit   merge2: [ '1.4.1' ],
+111 silly audit   micromatch: [ '4.0.8' ],
+111 silly audit   minimist: [ '1.2.8' ],
+111 silly audit   ms: [ '2.1.3' ],
+111 silly audit   nanoid: [ '3.3.11' ],
+111 silly audit   'napi-postinstall': [ '0.3.4' ],
+111 silly audit   'natural-compare': [ '1.4.0' ],
+111 silly audit   next: [ '16.1.6' ],
+111 silly audit   postcss: [ '8.4.31', '8.5.8' ],
+111 silly audit   'node-exports-info': [ '1.6.0' ],
+111 silly audit   'node-releases': [ '2.0.36' ],
+111 silly audit   'object-assign': [ '4.1.1' ],
+111 silly audit   'object-inspect': [ '1.13.4' ],
+111 silly audit   'object-keys': [ '1.1.1' ],
+111 silly audit   'object.assign': [ '4.1.7' ],
+111 silly audit   'object.entries': [ '1.1.9' ],
+111 silly audit   'object.fromentries': [ '2.0.8' ],
+111 silly audit   'object.groupby': [ '1.0.3' ],
+111 silly audit   'object.values': [ '1.2.1' ],
+111 silly audit   optionator: [ '0.9.4' ],
+111 silly audit   'own-keys': [ '1.0.1' ],
+111 silly audit   'p-limit': [ '3.1.0' ],
+111 silly audit   'p-locate': [ '5.0.0' ],
+111 silly audit   'parent-module': [ '1.0.1' ],
+111 silly audit   'path-exists': [ '4.0.0' ],
+111 silly audit   'path-key': [ '3.1.1' ],
+111 silly audit   'path-parse': [ '1.0.7' ],
+111 silly audit   picocolors: [ '1.1.1' ],
+111 silly audit   picomatch: [ '2.3.1', '4.0.3' ],
+111 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+111 silly audit   'prelude-ls': [ '1.2.1' ],
+111 silly audit   'prop-types': [ '15.8.1' ],
+111 silly audit   punycode: [ '2.3.1' ],
+111 silly audit   'queue-microtask': [ '1.2.3' ],
+111 silly audit   react: [ '19.2.3' ],
+111 silly audit   'react-dom': [ '19.2.3' ],
+111 silly audit   'react-is': [ '16.13.1' ],
+111 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+111 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+111 silly audit   'resolve-from': [ '4.0.0' ],
+111 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+111 silly audit   reusify: [ '1.1.0' ],
+111 silly audit   'run-parallel': [ '1.2.0' ],
+111 silly audit   'safe-array-concat': [ '1.1.3' ],
+111 silly audit   'safe-push-apply': [ '1.0.0' ],
+111 silly audit   'safe-regex-test': [ '1.1.0' ],
+111 silly audit   scheduler: [ '0.27.0' ],
+111 silly audit   'set-function-length': [ '1.2.2' ],
+111 silly audit   'set-function-name': [ '2.0.2' ],
+111 silly audit   'set-proto': [ '1.0.0' ],
+111 silly audit   sharp: [ '0.34.5' ],
+111 silly audit   'shebang-command': [ '2.0.0' ],
+111 silly audit   'shebang-regex': [ '3.0.0' ],
+111 silly audit   'side-channel': [ '1.1.0' ],
+111 silly audit   'side-channel-list': [ '1.0.0' ],
+111 silly audit   'side-channel-map': [ '1.0.1' ],
+111 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+111 silly audit   'source-map-js': [ '1.2.1' ],
+111 silly audit   'stable-hash': [ '0.0.5' ],
+111 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+111 silly audit   'string.prototype.includes': [ '2.0.1' ],
+111 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+111 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+111 silly audit   'string.prototype.trim': [ '1.2.10' ],
+111 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+111 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+111 silly audit   'strip-bom': [ '3.0.0' ],
+111 silly audit   'strip-json-comments': [ '3.1.1' ],
+111 silly audit   'styled-jsx': [ '5.1.6' ],
+111 silly audit   'supports-color': [ '7.2.0' ],
+111 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+111 silly audit   tailwindcss: [ '4.2.1' ],
+111 silly audit   tapable: [ '2.3.0' ],
+111 silly audit   tinyglobby: [ '0.2.15' ],
+111 silly audit   fdir: [ '6.5.0' ],
+111 silly audit   'to-regex-range': [ '5.0.1' ],
+111 silly audit   'ts-api-utils': [ '2.4.0' ],
+111 silly audit   'tsconfig-paths': [ '3.15.0' ],
+111 silly audit   tslib: [ '2.8.1' ],
+111 silly audit   'type-check': [ '0.4.0' ],
+111 silly audit   'typed-array-buffer': [ '1.0.3' ],
+111 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+111 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+111 silly audit   'typed-array-length': [ '1.0.7' ],
+111 silly audit   typescript: [ '5.9.3' ],
+111 silly audit   'typescript-eslint': [ '8.56.1' ],
+111 silly audit   'unbox-primitive': [ '1.1.0' ],
+111 silly audit   'undici-types': [ '6.21.0' ],
+111 silly audit   'unrs-resolver': [ '1.11.1' ],
+111 silly audit   'update-browserslist-db': [ '1.2.3' ],
+111 silly audit   'uri-js': [ '4.4.1' ],
+111 silly audit   which: [ '2.0.2' ],
+111 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+111 silly audit   'which-builtin-type': [ '1.2.1' ],
+111 silly audit   'which-collection': [ '1.0.2' ],
+111 silly audit   'which-typed-array': [ '1.1.20' ],
+111 silly audit   'word-wrap': [ '1.2.5' ],
+111 silly audit   yallist: [ '3.1.1' ],
+111 silly audit   'yocto-queue': [ '0.1.0' ],
+111 silly audit   zod: [ '4.3.6' ],
+111 silly audit   'zod-validation-error': [ '4.0.2' ]
+111 silly audit }
+112 http cache browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.28.1.tgz 0ms (cache hit)
+113 http cache @typescript-eslint/visitor-keys@https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-8.56.1.tgz 0ms (cache hit)
+114 http cache loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+115 http cache @typescript-eslint/typescript-estree@https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.56.1.tgz 0ms (cache hit)
+116 http cache update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz 0ms (cache hit)
+117 http cache @typescript-eslint/type-utils@https://registry.npmjs.org/@typescript-eslint/type-utils/-/type-utils-8.56.1.tgz 0ms (cache hit)
+118 http cache @typescript-eslint/types@https://registry.npmjs.org/@typescript-eslint/types/-/types-8.56.1.tgz 0ms (cache hit)
+119 http cache @typescript-eslint/utils@https://registry.npmjs.org/@typescript-eslint/utils/-/utils-8.56.1.tgz 0ms (cache hit)
+120 http cache @typescript-eslint/tsconfig-utils@https://registry.npmjs.org/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.56.1.tgz 0ms (cache hit)
+121 http cache @typescript-eslint/scope-manager@https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-8.56.1.tgz 0ms (cache hit)
+122 http cache @nodelib/fs.stat@https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz 0ms (cache hit)
+123 http cache @typescript-eslint/eslint-plugin@https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.56.1.tgz 0ms (cache hit)
+124 http cache @typescript-eslint/project-service@https://registry.npmjs.org/@typescript-eslint/project-service/-/project-service-8.56.1.tgz 0ms (cache hit)
+125 http cache @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz 0ms (cache hit)
+126 http cache @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz 0ms (cache hit)
+127 http cache @typescript-eslint/parser@https://registry.npmjs.org/@typescript-eslint/parser/-/parser-8.56.1.tgz 0ms (cache hit)
+128 http cache @swc/helpers@https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz 0ms (cache hit)
+129 http cache @nodelib/fs.scandir@https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz 0ms (cache hit)
+130 http cache @next/eslint-plugin-next@https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-16.1.6.tgz 0ms (cache hit)
+131 http cache @img/sharp-libvips-darwin-arm64@https://registry.npmjs.org/@img/sharp-libvips-darwin-arm64/-/sharp-libvips-darwin-arm64-1.2.4.tgz 0ms (cache hit)
+132 http cache @jridgewell/gen-mapping@https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz 0ms (cache hit)
+133 http cache @eslint/object-schema@https://registry.npmjs.org/@eslint/object-schema/-/object-schema-2.1.7.tgz 0ms (cache hit)
+134 http cache @eslint/js@https://registry.npmjs.org/@eslint/js/-/js-9.39.3.tgz 0ms (cache hit)
+135 http cache @eslint/plugin-kit@https://registry.npmjs.org/@eslint/plugin-kit/-/plugin-kit-0.4.1.tgz 0ms (cache hit)
+136 http cache @eslint/eslintrc@https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-3.3.4.tgz 0ms (cache hit)
+137 http cache @eslint/core@https://registry.npmjs.org/@eslint/core/-/core-0.17.0.tgz 0ms (cache hit)
+138 http cache @babel/types@https://registry.npmjs.org/@babel/types/-/types-7.29.0.tgz 0ms (cache hit)
+139 http cache @eslint/config-array@https://registry.npmjs.org/@eslint/config-array/-/config-array-0.21.1.tgz 0ms (cache hit)
+140 http cache @jridgewell/resolve-uri@https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz 0ms (cache hit)
+141 http cache @nodelib/fs.walk@https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz 0ms (cache hit)
+142 http cache @eslint/config-helpers@https://registry.npmjs.org/@eslint/config-helpers/-/config-helpers-0.4.2.tgz 0ms (cache hit)
+143 http cache @babel/helper-string-parser@https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz 0ms (cache hit)
+144 http cache @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.0.tgz 0ms (cache hit)
+145 http cache @babel/helpers@https://registry.npmjs.org/@babel/helpers/-/helpers-7.28.6.tgz 0ms (cache hit)
+146 http cache @babel/template@https://registry.npmjs.org/@babel/template/-/template-7.28.6.tgz 0ms (cache hit)
+147 http cache @babel/traverse@https://registry.npmjs.org/@babel/traverse/-/traverse-7.29.0.tgz 0ms (cache hit)
+148 http cache @babel/helper-module-transforms@https://registry.npmjs.org/@babel/helper-module-transforms/-/helper-module-transforms-7.28.6.tgz 0ms (cache hit)
+149 http cache @babel/core@https://registry.npmjs.org/@babel/core/-/core-7.29.0.tgz 0ms (cache hit)
+150 http cache uri-js@https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz 0ms (cache hit)
+151 http cache @babel/generator@https://registry.npmjs.org/@babel/generator/-/generator-7.29.1.tgz 0ms (cache hit)
+152 http cache @babel/compat-data@https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.29.0.tgz 0ms (cache hit)
+153 http cache zod@https://registry.npmjs.org/zod/-/zod-4.3.6.tgz 0ms (cache hit)
+154 http cache @babel/helper-compilation-targets@https://registry.npmjs.org/@babel/helper-compilation-targets/-/helper-compilation-targets-7.28.6.tgz 0ms (cache hit)
+155 http cache tsconfig-paths@https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-3.15.0.tgz 0ms (cache hit)
+156 http cache which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 0ms (cache hit)
+157 http cache typescript-eslint@https://registry.npmjs.org/typescript-eslint/-/typescript-eslint-8.56.1.tgz 0ms (cache hit)
+158 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 0ms (cache hit)
+159 http cache styled-jsx@https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz 0ms (cache hit)
+160 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+161 http cache string.prototype.includes@https://registry.npmjs.org/string.prototype.includes/-/string.prototype.includes-2.0.1.tgz 0ms (cache hit)
+162 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.11.tgz 0ms (cache hit)
+163 http cache reusify@https://registry.npmjs.org/reusify/-/reusify-1.1.0.tgz 0ms (cache hit)
+164 http cache react-dom@https://registry.npmjs.org/react-dom/-/react-dom-19.2.3.tgz 0ms (cache hit)
+165 http cache object-inspect@https://registry.npmjs.org/object-inspect/-/object-inspect-1.13.4.tgz 0ms (cache hit)
+166 http cache napi-postinstall@https://registry.npmjs.org/napi-postinstall/-/napi-postinstall-0.3.4.tgz 0ms (cache hit)
+167 http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz 0ms (cache hit)
+168 http cache node-releases@https://registry.npmjs.org/node-releases/-/node-releases-2.0.36.tgz 0ms (cache hit)
+169 http cache language-subtag-registry@https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.23.tgz 0ms (cache hit)
+170 http cache next@https://registry.npmjs.org/next/-/next-16.1.6.tgz 0ms (cache hit)
+171 http cache jsx-ast-utils@https://registry.npmjs.org/jsx-ast-utils/-/jsx-ast-utils-3.3.5.tgz 0ms (cache hit)
+172 http cache json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+173 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-2.6.1.tgz 0ms (cache hit)
+174 http cache json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz 0ms (cache hit)
+175 http cache js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz 0ms (cache hit)
+176 http cache hermes-estree@https://registry.npmjs.org/hermes-estree/-/hermes-estree-0.25.1.tgz 0ms (cache hit)
+177 http cache has-tostringtag@https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz 0ms (cache hit)
+178 http cache has-symbols@https://registry.npmjs.org/has-symbols/-/has-symbols-1.1.0.tgz 0ms (cache hit)
+179 http cache hermes-parser@https://registry.npmjs.org/hermes-parser/-/hermes-parser-0.25.1.tgz 0ms (cache hit)
+180 http cache eslint-plugin-import@https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.32.0.tgz 0ms (cache hit)
+181 http cache eslint-plugin-jsx-a11y@https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.10.2.tgz 0ms (cache hit)
+182 http cache flatted@https://registry.npmjs.org/flatted/-/flatted-3.3.4.tgz 0ms (cache hit)
+183 http cache eslint-plugin-react@https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.37.5.tgz 0ms (cache hit)
+184 http cache es-iterator-helpers@https://registry.npmjs.org/es-iterator-helpers/-/es-iterator-helpers-1.2.2.tgz 0ms (cache hit)
+185 http cache fast-glob@https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.1.tgz 0ms (cache hit)
+186 http cache es-abstract@https://registry.npmjs.org/es-abstract/-/es-abstract-1.24.1.tgz 0ms (cache hit)
+187 http cache jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz 0ms (cache hit)
+188 http cache eslint@https://registry.npmjs.org/eslint/-/eslint-9.39.3.tgz 0ms (cache hit)
+189 http cache cross-spawn@https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz 0ms (cache hit)
+190 http cache enhanced-resolve@https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.20.0.tgz 0ms (cache hit)
+191 http cache caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001776.tgz 0ms (cache hit)
+192 http cache baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.10.0.tgz 0ms (cache hit)
+193 http cache axobject-query@https://registry.npmjs.org/axobject-query/-/axobject-query-4.1.0.tgz 0ms (cache hit)
+194 http cache axe-core@https://registry.npmjs.org/axe-core/-/axe-core-4.11.1.tgz 0ms (cache hit)
+195 http cache ajv@https://registry.npmjs.org/ajv/-/ajv-6.14.0.tgz 0ms (cache hit)
+196 http cache aria-query@https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz 0ms (cache hit)
+197 http cache eslint-visitor-keys@https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.4.3.tgz 0ms (cache hit)
+198 http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz 0ms (cache hit)
+199 http cache picomatch@https://registry.npmjs.org/picomatch/-/picomatch-4.0.3.tgz 0ms (cache hit)
+200 http cache fdir@https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz 0ms (cache hit)
+201 http cache debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz 0ms (cache hit)
+202 http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.4.tgz 0ms (cache hit)
+203 http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.4.tgz 0ms (cache hit)
+204 http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.4.tgz 0ms (cache hit)
+205 http cache debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz 0ms (cache hit)
+206 http cache minimatch@https://registry.npmjs.org/minimatch/-/minimatch-10.2.4.tgz 0ms (cache hit)
+207 http cache eslint-visitor-keys@https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-5.0.1.tgz 0ms (cache hit)
+208 http cache brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.4.tgz 0ms (cache hit)
+209 http cache balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-4.0.4.tgz 0ms (cache hit)
+210 http cache debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz 0ms (cache hit)
+211 http cache json5@https://registry.npmjs.org/json5/-/json5-1.0.2.tgz 0ms (cache hit)
+212 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.6.tgz 0ms (cache hit)
+213 http cache postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.31.tgz 0ms (cache hit)
+214 silly tarball no local data for @typescript-eslint/visitor-keys@https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-8.56.1.tgz. Extracting by manifest.
+215 silly tarball no local data for @typescript-eslint/typescript-estree@https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.56.1.tgz. Extracting by manifest.
+216 silly tarball no local data for @typescript-eslint/type-utils@https://registry.npmjs.org/@typescript-eslint/type-utils/-/type-utils-8.56.1.tgz. Extracting by manifest.
+217 silly tarball no local data for @typescript-eslint/types@https://registry.npmjs.org/@typescript-eslint/types/-/types-8.56.1.tgz. Extracting by manifest.
+218 silly tarball no local data for @typescript-eslint/tsconfig-utils@https://registry.npmjs.org/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.56.1.tgz. Extracting by manifest.
+219 silly tarball no local data for @typescript-eslint/utils@https://registry.npmjs.org/@typescript-eslint/utils/-/utils-8.56.1.tgz. Extracting by manifest.
+220 silly tarball no local data for @typescript-eslint/scope-manager@https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-8.56.1.tgz. Extracting by manifest.
+221 silly tarball no local data for @nodelib/fs.stat@https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz. Extracting by manifest.
+222 silly tarball no local data for @typescript-eslint/parser@https://registry.npmjs.org/@typescript-eslint/parser/-/parser-8.56.1.tgz. Extracting by manifest.
+223 silly tarball no local data for @typescript-eslint/project-service@https://registry.npmjs.org/@typescript-eslint/project-service/-/project-service-8.56.1.tgz. Extracting by manifest.
+224 silly tarball no local data for @typescript-eslint/eslint-plugin@https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.56.1.tgz. Extracting by manifest.
+225 silly tarball no local data for @nodelib/fs.scandir@https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz. Extracting by manifest.
+226 silly tarball no local data for @nodelib/fs.walk@https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz. Extracting by manifest.
+227 silly tarball no local data for typescript-eslint@https://registry.npmjs.org/typescript-eslint/-/typescript-eslint-8.56.1.tgz. Extracting by manifest.
+228 silly tarball no local data for resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.11.tgz. Extracting by manifest.
+229 silly tarball no local data for next@https://registry.npmjs.org/next/-/next-16.1.6.tgz. Extracting by manifest.
+230 silly tarball no local data for fast-glob@https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.1.tgz. Extracting by manifest.
+231 silly tarball no local data for resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.6.tgz. Extracting by manifest.
+232 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/tsconfig-utils/-/tsconfig-utils-8.56.1.tgz 410ms (cache miss)
+233 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/parser/-/parser-8.56.1.tgz 410ms (cache miss)
+234 http fetch GET 200 https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz 411ms (cache miss)
+235 http fetch GET 200 https://registry.npmjs.org/typescript-eslint/-/typescript-eslint-8.56.1.tgz 416ms (cache miss)
+236 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-8.56.1.tgz 419ms (cache miss)
+237 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/project-service/-/project-service-8.56.1.tgz 419ms (cache miss)
+238 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/types/-/types-8.56.1.tgz 430ms (cache miss)
+239 http fetch GET 200 https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz 433ms (cache miss)
+240 http fetch GET 200 https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz 443ms (cache miss)
+241 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 511ms
+242 silly audit report {}
+243 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/type-utils/-/type-utils-8.56.1.tgz 480ms (cache miss)
+244 http fetch GET 200 https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.1.tgz 530ms (cache miss)
+245 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-8.56.1.tgz 579ms (cache miss)
+246 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/utils/-/utils-8.56.1.tgz 598ms (cache miss)
+247 http fetch GET 200 https://registry.npmjs.org/resolve/-/resolve-1.22.11.tgz 682ms (cache miss)
+248 http fetch GET 200 https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.6.tgz 690ms (cache miss)
+249 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-8.56.1.tgz 989ms (cache miss)
+250 http fetch GET 200 https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.56.1.tgz 1156ms (cache miss)
+251 http fetch GET 200 https://registry.npmjs.org/next/-/next-16.1.6.tgz 3173ms (cache miss)
+252 silly CHANGE node_modules/update-browserslist-db
+253 silly CHANGE node_modules/@eslint-community/eslint-utils/node_modules/eslint-visitor-keys
+254 silly REMOVE node_modules/tailwind-merge
+255 silly CHANGE node_modules/tinyglobby/node_modules/picomatch
+256 silly CHANGE node_modules/tinyglobby/node_modules/fdir
+257 silly CHANGE node_modules/sharp/node_modules/semver
+258 silly CHANGE node_modules/loose-envify
+259 silly CHANGE node_modules/is-bun-module/node_modules/semver
+260 silly CHANGE node_modules/eslint-module-utils/node_modules/debug
+261 silly CHANGE node_modules/eslint-import-resolver-node/node_modules/debug
+262 silly REMOVE node_modules/clsx
+263 silly CHANGE node_modules/browserslist
+264 silly CHANGE node_modules/@typescript-eslint/visitor-keys
+265 silly CHANGE node_modules/@typescript-eslint/visitor-keys/node_modules/eslint-visitor-keys
+266 silly CHANGE node_modules/@typescript-eslint/utils
+267 silly CHANGE node_modules/@typescript-eslint/typescript-estree
+268 silly CHANGE node_modules/@typescript-eslint/typescript-estree/node_modules/semver
+269 silly CHANGE node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch
+270 silly CHANGE node_modules/@typescript-eslint/typescript-estree/node_modules/brace-expansion
+271 silly CHANGE node_modules/@typescript-eslint/typescript-estree/node_modules/balanced-match
+272 silly CHANGE node_modules/@typescript-eslint/types
+273 silly CHANGE node_modules/@typescript-eslint/type-utils
+274 silly CHANGE node_modules/@typescript-eslint/scope-manager
+275 silly CHANGE node_modules/@typescript-eslint/tsconfig-utils
+276 silly CHANGE node_modules/@typescript-eslint/project-service
+277 silly CHANGE node_modules/@typescript-eslint/parser
+278 silly CHANGE node_modules/@typescript-eslint/eslint-plugin
+279 silly CHANGE node_modules/@nodelib/fs.stat
+280 silly CHANGE node_modules/@tybys/wasm-util
+281 silly CHANGE node_modules/@napi-rs/wasm-runtime
+282 silly CHANGE node_modules/@swc/helpers
+283 silly CHANGE node_modules/@jridgewell/resolve-uri
+284 silly CHANGE node_modules/@nodelib/fs.walk
+285 silly CHANGE node_modules/@nodelib/fs.scandir
+286 silly CHANGE node_modules/@next/eslint-plugin-next
+287 silly CHANGE node_modules/@img/sharp-libvips-darwin-arm64
+288 silly CHANGE node_modules/@jridgewell/gen-mapping
+289 silly CHANGE node_modules/@eslint/plugin-kit
+290 silly CHANGE node_modules/@eslint/object-schema
+291 silly CHANGE node_modules/@eslint/js
+292 silly CHANGE node_modules/@eslint/eslintrc
+293 silly CHANGE node_modules/@eslint/core
+294 silly CHANGE node_modules/@eslint/config-helpers
+295 silly CHANGE node_modules/@eslint/config-array
+296 silly CHANGE node_modules/@babel/types
+297 silly CHANGE node_modules/@babel/helpers
+298 silly CHANGE node_modules/@babel/traverse
+299 silly CHANGE node_modules/@babel/template
+300 silly CHANGE node_modules/@babel/parser
+301 silly CHANGE node_modules/@babel/helper-string-parser
+302 silly CHANGE node_modules/@babel/helper-module-transforms
+303 silly CHANGE node_modules/uri-js
+304 silly CHANGE node_modules/@babel/helper-compilation-targets
+305 silly CHANGE node_modules/@babel/generator
+306 silly CHANGE node_modules/@babel/core
+307 silly CHANGE node_modules/@babel/compat-data
+308 silly CHANGE node_modules/zod
+309 silly CHANGE node_modules/which
+310 silly CHANGE node_modules/tsconfig-paths
+311 silly CHANGE node_modules/tsconfig-paths/node_modules/json5
+312 silly CHANGE node_modules/typescript-eslint
+313 silly CHANGE node_modules/typescript
+314 silly CHANGE node_modules/styled-jsx
+315 silly CHANGE node_modules/string.prototype.includes
+316 silly CHANGE node_modules/semver
+317 silly CHANGE node_modules/reusify
+318 silly CHANGE node_modules/resolve
+319 silly CHANGE node_modules/react-dom
+320 silly CHANGE node_modules/object-inspect
+321 silly CHANGE node_modules/next
+322 silly CHANGE node_modules/next/node_modules/postcss
+323 silly CHANGE node_modules/node-releases
+324 silly CHANGE node_modules/napi-postinstall
+325 silly CHANGE node_modules/nanoid
+326 silly CHANGE node_modules/language-subtag-registry
+327 silly CHANGE node_modules/json5
+328 silly CHANGE node_modules/jsx-ast-utils
+329 silly CHANGE node_modules/jiti
+330 silly CHANGE node_modules/jsesc
+331 silly CHANGE node_modules/json-schema-traverse
+332 silly CHANGE node_modules/js-yaml
+333 silly CHANGE node_modules/hermes-estree
+334 silly CHANGE node_modules/has-symbols
+335 silly CHANGE node_modules/has-tostringtag
+336 silly CHANGE node_modules/hermes-parser
+337 silly CHANGE node_modules/eslint-plugin-jsx-a11y
+338 silly CHANGE node_modules/eslint-plugin-import
+339 silly CHANGE node_modules/eslint-plugin-import/node_modules/debug
+340 silly CHANGE node_modules/flatted
+341 silly CHANGE node_modules/eslint-plugin-react
+342 silly CHANGE node_modules/eslint-plugin-react/node_modules/resolve
+343 silly CHANGE node_modules/fast-glob
+344 silly CHANGE node_modules/es-iterator-helpers
+345 silly CHANGE node_modules/es-abstract
+346 silly CHANGE node_modules/eslint
+347 silly CHANGE node_modules/enhanced-resolve
+348 silly CHANGE node_modules/cross-spawn
+349 silly CHANGE node_modules/caniuse-lite
+350 silly CHANGE node_modules/baseline-browser-mapping
+351 silly CHANGE node_modules/axobject-query
+352 silly CHANGE node_modules/axe-core
+353 silly CHANGE node_modules/aria-query
+354 silly CHANGE node_modules/ajv
+355 silly CHANGE node_modules/acorn
+356 verbose cwd /Users/ishidasouta/antigravity/aferiate_clean
+357 verbose os Darwin 25.2.0
+358 verbose node v25.7.0
+359 verbose npm  v11.10.1
+360 verbose exit 0
+361 info ok

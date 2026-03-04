@@ -1,0 +1,195 @@
+"use client";
+
+import { ResultData, ResultType } from "@/data/quiz";
+import { cn } from "@/lib/utils";
+
+const typeConfig: Record<ResultType, { color: string; bgClass: string; iconPath: React.ReactNode }> = {
+    REWARD: {
+        color: "text-amber-600 dark:text-amber-500",
+        bgClass: "bg-gradient-to-br from-amber-50 to-orange-100 dark:from-amber-950/40 dark:to-orange-900/40",
+        iconPath: <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+    },
+    STATUS: {
+        color: "text-slate-800 dark:text-slate-200",
+        bgClass: "bg-gradient-to-br from-slate-100 to-zinc-200 dark:from-slate-900 dark:to-zinc-800",
+        iconPath: <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    },
+    TRAVEL: {
+        color: "text-blue-600 dark:text-blue-500",
+        bgClass: "bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-950/40 dark:to-indigo-900/40",
+        iconPath: <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6L3 8l6 5.3-2.9 2.9c-1 1-2.2 1.2-3.6 1.1L2 17l4.6 4.6.6.6c.1 1.4-.1 2.6-1.1 3.6l2.9-2.9L16 21l1.2.8c.4.2.7-.2.6-.6Z" />
+    },
+};
+
+interface ResultViewProps {
+    results: ResultData[];
+    onReset: () => void;
+}
+
+export function ResultView({ results, onReset }: ResultViewProps) {
+    if (!results || results.length === 0) return null;
+
+    const primary = results[0];
+    const secondaryList = results.slice(1, 3);
+    const { color, bgClass, iconPath } = typeConfig[primary.type];
+
+    return (
+        <div className="w-full max-w-4xl mx-auto p-4 sm:p-6 pb-24 transition-all duration-700">
+            {/* Primary Result */}
+            <div className={cn("rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden transition-all mb-12", bgClass)}>
+                <div className="absolute -top-24 -right-24 opacity-10 animate-[spin_50s_linear_infinite]">
+                    <svg className="w-96 h-96" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        {iconPath}
+                    </svg>
+                </div>
+
+                <div className="relative z-10 flex flex-col items-center text-center">
+                    <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-2xl bg-white/80 dark:bg-black/30 shadow-lg backdrop-blur-sm transition-all duration-500">
+                        <svg className={cn("w-10 h-10", color)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            {iconPath}
+                        </svg>
+                    </div>
+
+                    <span className={cn("text-sm font-bold tracking-widest uppercase mb-3 transition-opacity duration-500", color)}>
+                        {primary.title}
+                    </span>
+
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-slate-900 dark:text-white leading-tight transition-all duration-500">
+                        あなたの最適解は<br />
+                        <span className={cn("block mt-2", color)}>{primary.cardName}</span>
+                    </h1>
+
+                    <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-300 mb-10 max-w-2xl leading-relaxed transition-opacity duration-500">
+                        {primary.description}
+                    </p>
+
+                    <div className="w-full max-w-md bg-white/60 dark:bg-black/40 backdrop-blur-md rounded-2xl p-6 mb-10 text-left shadow-inner border border-white/20 dark:border-white/10 transition-all duration-500">
+                        <h3 className="font-bold text-slate-900 dark:text-white mb-4 flex items-center">
+                            <svg className="w-5 h-5 mr-2 text-amber-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+                            </svg>
+                            選ばれた3つの理由
+                        </h3>
+                        <ul className="space-y-3">
+                            {primary.features.map((feature, idx) => (
+                                <li key={idx} className="flex items-start">
+                                    <span className="text-emerald-500 mr-2 font-bold select-none">✓</span>
+                                    <span className="text-slate-700 dark:text-slate-300 font-medium">{feature}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div className="flex flex-col w-full max-w-md transition-all duration-500 items-center">
+                        {primary.campaignText && (
+                            <div className="mb-3 px-4 py-2 bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300 rounded-full font-bold text-sm border border-red-200 dark:border-red-800 animate-pulse">
+                                {primary.campaignText}
+                            </div>
+                        )}
+                        <a
+                            href={primary.affiliateLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full group relative flex items-center justify-center gap-2 rounded-xl bg-slate-900 dark:bg-white px-8 py-5 text-white dark:text-slate-900 font-bold transition-all hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 dark:via-black/10 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                            <span className="text-lg">公式サイトで詳細を見る</span>
+                            <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+
+                        <p className="text-xs text-slate-500 mt-3">※ 上記は広告リンクです</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Sub Recommendations */}
+            {secondaryList.length > 0 && (
+                <div className="w-full max-w-3xl mx-auto space-y-6 mb-12">
+                    <h2 className="text-2xl font-bold text-center text-slate-800 dark:text-slate-200 mb-6 flex items-center justify-center gap-2">
+                        <svg className="w-6 h-6 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></svg>
+                        僅差でこちらのカードもおすすめです
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {secondaryList.map((subResult, index) => {
+                            const subConfig = typeConfig[subResult.type];
+                            return (
+                                <div key={index} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className={cn("w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800", subConfig.color)}>
+                                            <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                                {subConfig.iconPath}
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <span className={cn("text-xs font-bold uppercase", subConfig.color)}>{subResult.title}</span>
+                                            <h4 className="font-bold text-slate-900 dark:text-white leading-tight">{subResult.cardName}</h4>
+                                        </div>
+                                    </div>
+                                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+                                        {subResult.description.substring(0, 80)}...
+                                    </p>
+                                    <a
+                                        href={subResult.affiliateLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full text-center block py-3 px-4 rounded-xl font-bold text-sm bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white transition-colors"
+                                    >
+                                        詳細を見る
+                                    </a>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
+            {/* M-3: SNS Share Section */}
+            <div className="flex flex-col items-center gap-4 mt-8">
+                <p className="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-wide uppercase">診断結果をシェアする</p>
+                <div className="flex gap-3">
+                    <a
+                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`クレジットカード診断の結果、私の最適解は「${primary.cardName}」でした！\nあなたも試してみて👇`)}&url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-5 py-3 rounded-xl bg-black text-white font-bold text-sm hover:bg-neutral-800 transition-all hover:scale-105 shadow"
+                    >
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zM17.083 20.25l-10.875-14.5H4.56l10.915 14.5h2.607z" /></svg>
+                        X でシェア
+                    </a>
+                    <a
+                        href={`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}&text=${encodeURIComponent(`クレジットカード診断の結果、私の最適解は「${primary.cardName}」でした！`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#06C755] text-white font-bold text-sm hover:bg-green-600 transition-all hover:scale-105 shadow"
+                    >
+                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.522 10.087c0-4.524-4.535-8.203-10.107-8.203-5.575 0-10.109 3.679-10.109 8.203 0 4.054 3.595 7.449 8.452 8.097.329.07.776.217.889.499.102.256.067.657.033.916l-.144.862c-.044.256-.203.999.876.545 1.08-.455 5.824-3.43 7.946-5.874 1.466-1.608 2.164-3.24 2.164-5.045z" /></svg>
+                        LINE でシェア
+                    </a>
+                </div>
+                <button
+                    onClick={onReset}
+                    className="mt-2 px-8 py-3 rounded-xl font-bold border-2 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 text-slate-600 dark:text-slate-400 transition-all hover:scale-105 text-sm"
+                >
+                    最初から診断をやり直す
+                </button>
+            </div>
+
+            {/* Sticky Mobile CTA for M-1 */}
+            <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 flex justify-center z-50 animate-in slide-in-from-bottom-24 duration-700 md:hidden block shadow-2xl">
+                <a
+                    href={primary.affiliateLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full max-w-sm relative flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-4 text-white font-bold transition-all active:scale-95 shadow-lg overflow-hidden"
+                >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-shimmer" />
+                    【最適解】を公式サイトで見る
+                </a>
+            </div>
+        </div>
+    );
+}

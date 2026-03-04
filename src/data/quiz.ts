@@ -95,7 +95,7 @@ export const results: Record<ResultType, ResultData> = {
     cardName: '楽天プレミアムカード（または楽天カード）',
     description: 'あなたは徹底した実利主義のエンジニア。無駄なくザクザクポイントが貯まり、すぐに生活費やガジェット購入に充てられる高還元率カードが最適です。',
     features: ['どこでも高還元率', '貯まったポイントが使いやすい', '年会費の元がすぐ取れる'],
-    affiliateLink: '#',
+    affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918dce.84286293.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MTY3NDAxLCJhbXAiOmZhbHNlfQ%3D%3D',
     campaignText: '🎉 もれなく新規入会で最大10,000ポイントプレゼント中！',
   },
   STATUS: {

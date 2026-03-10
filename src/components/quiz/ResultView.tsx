@@ -426,7 +426,7 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                 <p className="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-wide uppercase">診断結果をシェアする</p>
                 <div className="flex gap-3">
                     <a
-                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`クレジットカード診断の結果、私の最適解は「${primary.cardName}」でした！\nあなたも試してみて👇`)}&url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
+                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`クレジットカード診断の結果、私の最適解は「${primary.cardName}」でした！\nあなたも試してみて👇`)}&url=${encodeURIComponent(typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}?result=${primary.type}` : '')}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-5 py-3 rounded-xl bg-black text-white font-bold text-sm hover:bg-neutral-800 transition-all hover:scale-105 shadow"
@@ -435,7 +435,7 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                         X でシェア
                     </a>
                     <a
-                        href={`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}&text=${encodeURIComponent(`クレジットカード診断の結果、私の最適解は「${primary.cardName}」でした！`)}`}
+                        href={`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}?result=${primary.type}` : '')}&text=${encodeURIComponent(`クレジットカード診断の結果、私の最適解は「${primary.cardName}」でした！`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#06C755] text-white font-bold text-sm hover:bg-green-600 transition-all hover:scale-105 shadow"

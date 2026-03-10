@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Option, Question, questions, results, ResultData, ResultType } from "@/data/quiz";
 import { QuestionView } from "./QuestionView";
 import { ResultView } from "./ResultView";
@@ -18,6 +18,15 @@ export function QuizApp() {
     const [history, setHistory] = useState<{ index: number; scores: typeof scores }[]>([]);
     const [result, setResult] = useState<ResultData[] | null>(null);
     const [selectedOption, setSelectedOption] = useState<Option | null>(null);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const initialResult = params.get('result') as ResultType;
+        if (initialResult && results[initialResult]) {
+            const rankedTypes = [initialResult, ...Object.keys(results).filter(t => t !== initialResult)] as ResultType[];
+            setResult(rankedTypes.map(type => results[type]));
+        }
+    }, []);
 
     const handleSelectOption = (option: Option) => {
         setSelectedOption(option);
@@ -77,6 +86,13 @@ export function QuizApp() {
         setHistory([]);
         setResult(null);
         setSelectedOption(null);
+
+        // Clear result param from URL
+        if (typeof window !== 'undefined') {
+            const url = new URL(window.location.href);
+            url.searchParams.delete('result');
+            window.history.pushState({}, '', url.toString());
+        }
     };
 
     const currentQuestion = questions[currentQuestionIndex];

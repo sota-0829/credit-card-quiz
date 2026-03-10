@@ -1,5 +1,30 @@
 import { QuizApp } from "@/components/quiz/QuizApp";
 import Link from "next/link";
+import { Metadata } from "next";
+import { results } from "@/data/quiz";
+
+export async function generateMetadata({ searchParams }: { searchParams: { result?: string } }): Promise<Metadata> {
+  const resultType = searchParams.result;
+  const resultData = resultType && results[resultType as keyof typeof results];
+
+  const ogTitle = resultData
+    ? `診断結果：あなたは「${resultData.cardName}」が最適！`
+    : "クレジットカード最適化診断 | あなたに最適な1枚を見つけよう";
+
+  const ogImage = resultType ? `/api/og?result=${resultType}` : '/opengraph-image';
+
+  return {
+    title: ogTitle,
+    openGraph: {
+      title: ogTitle,
+      images: [ogImage],
+    },
+    twitter: {
+      title: ogTitle,
+      images: [ogImage],
+    }
+  };
+}
 
 export default function Home() {
   return (

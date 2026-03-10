@@ -9,6 +9,7 @@ interface QuestionViewProps {
     title: string;
     options: Option[];
     onSelect: (option: Option) => void;
+    onBack: () => void;
     selectedOption: Option | null;
 }
 
@@ -18,20 +19,35 @@ export function QuestionView({
     title,
     options,
     onSelect,
+    onBack,
     selectedOption,
 }: QuestionViewProps) {
     return (
         <div className="w-full max-w-2xl mx-auto p-6 transition-all duration-500">
-            <div className="mb-8 flex items-center justify-between">
-                <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                    Question {questionNumber} of {totalQuestions}
-                </span>
-                <div className="h-2 flex-1 mx-4 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-                    <div
-                        className="h-full bg-blue-600 transition-all duration-500 ease-out"
-                        style={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
-                    />
+            <div className="mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex items-center flex-1">
+                    <span className="text-sm font-medium text-slate-500 dark:text-slate-400 whitespace-nowrap">
+                        Question {questionNumber} of {totalQuestions}
+                    </span>
+                    <div className="h-2 flex-1 mx-4 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                        <div
+                            className="h-full bg-blue-600 transition-all duration-500 ease-out"
+                            style={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
+                        />
+                    </div>
                 </div>
+
+                {questionNumber > 1 && (
+                    <button
+                        onClick={onBack}
+                        className="flex items-center gap-1.5 text-sm font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors py-1 pl-1 pr-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-900 w-fit"
+                    >
+                        <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+                        前の質問へ
+                    </button>
+                )}
             </div>
 
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-slate-900 dark:text-white leading-tight">

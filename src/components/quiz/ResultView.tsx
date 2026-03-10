@@ -226,7 +226,11 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                                                     ? '/articles/epos-card-travel-insurance'
                                                     : subResult.type === 'CONVENIENCE'
                                                         ? '/articles/smbc-card-nl-review'
-                                                        : '#'
+                                                        : subResult.type === 'AMAZON'
+                                                            ? '/articles/jcb-card-w-review'
+                                                            : subResult.type === 'PAYPAY'
+                                                                ? '/articles/paypay-card-review'
+                                                                : '#'
                                         }
                                         className="mt-4 text-center text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors"
                                     >

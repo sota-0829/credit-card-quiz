@@ -15,6 +15,7 @@ export function QuizApp() {
         AMAZON: 0,
         PAYPAY: 0
     });
+    const [history, setHistory] = useState<{ index: number; scores: typeof scores }[]>([]);
     const [result, setResult] = useState<ResultData[] | null>(null);
     const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
@@ -23,6 +24,9 @@ export function QuizApp() {
 
         // Briefly show selection, then advance
         setTimeout(() => {
+            // Store current state in history before updating
+            setHistory([...history, { index: currentQuestionIndex, scores: { ...scores } }]);
+
             // Accumulate score
             const newScores = {
                 REWARD: scores.REWARD + option.points.REWARD,
@@ -50,6 +54,16 @@ export function QuizApp() {
         }, 400); // 400ms delay to show the "checked" animation
     };
 
+    const handleBack = () => {
+        if (history.length === 0) return;
+
+        const previousState = history[history.length - 1];
+        setCurrentQuestionIndex(previousState.index);
+        setScores(previousState.scores);
+        setHistory(history.slice(0, -1));
+        setSelectedOption(null);
+    };
+
     const handleReset = () => {
         setCurrentQuestionIndex(0);
         setScores({
@@ -60,6 +74,7 @@ export function QuizApp() {
             AMAZON: 0,
             PAYPAY: 0
         });
+        setHistory([]);
         setResult(null);
         setSelectedOption(null);
     };
@@ -77,6 +92,7 @@ export function QuizApp() {
                     title={currentQuestion.title}
                     options={currentQuestion.options}
                     onSelect={handleSelectOption}
+                    onBack={handleBack}
                     selectedOption={selectedOption}
                 />
             )}

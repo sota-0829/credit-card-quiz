@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { ResultData, ResultType } from "@/data/quiz";
 import { cn } from "@/lib/utils";
 
@@ -155,7 +156,6 @@ export function ResultView({ results, onReset }: ResultViewProps) {
 
                         <p className="text-xs text-slate-500 mt-3">※ 上記は広告リンクです</p>
 
-                        {/* A8.net Tracking Elements (Primary) */}
                         {primary.adScript && (
                             <div id={primary.adScript.id} className="hidden" />
                         )}
@@ -163,6 +163,21 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                             // eslint-disable-next-line @next/next/no-img-element
                             <img src={primary.adPixel} width="1" height="1" alt="" className="hidden" />
                         )}
+
+                        <Link
+                            href={
+                                primary.type === 'REWARD' || primary.type === 'TRAVEL'
+                                    ? '/articles/rakuten-premium-card-review'
+                                    : primary.type === 'STATUS'
+                                        ? '/articles/epos-card-travel-insurance'
+                                        : primary.type === 'CONVENIENCE'
+                                            ? '/articles/smbc-card-nl-review'
+                                            : '#'
+                            }
+                            className="mt-6 text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors underline underline-offset-4"
+                        >
+                            このカードの徹底解説記事を読む
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -202,6 +217,21 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                                     >
                                         詳細を見る
                                     </a>
+
+                                    <Link
+                                        href={
+                                            subResult.type === 'REWARD' || subResult.type === 'TRAVEL'
+                                                ? '/articles/rakuten-premium-card-review'
+                                                : subResult.type === 'STATUS'
+                                                    ? '/articles/epos-card-travel-insurance'
+                                                    : subResult.type === 'CONVENIENCE'
+                                                        ? '/articles/smbc-card-nl-review'
+                                                        : '#'
+                                        }
+                                        className="mt-4 text-center text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors"
+                                    >
+                                        解説を読む
+                                    </Link>
 
                                     {/* A8.net Tracking Elements (Secondary) */}
                                     {subResult.adScript && (

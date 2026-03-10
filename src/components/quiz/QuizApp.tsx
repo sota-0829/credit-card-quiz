@@ -7,7 +7,14 @@ import { ResultView } from "./ResultView";
 
 export function QuizApp() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [scores, setScores] = useState({ REWARD: 0, STATUS: 0, TRAVEL: 0 });
+    const [scores, setScores] = useState({
+        REWARD: 0,
+        STATUS: 0,
+        TRAVEL: 0,
+        CONVENIENCE: 0,
+        AMAZON: 0,
+        PAYPAY: 0
+    });
     const [result, setResult] = useState<ResultData[] | null>(null);
     const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
@@ -21,6 +28,9 @@ export function QuizApp() {
                 REWARD: scores.REWARD + option.points.REWARD,
                 STATUS: scores.STATUS + option.points.STATUS,
                 TRAVEL: scores.TRAVEL + option.points.TRAVEL,
+                CONVENIENCE: scores.CONVENIENCE + option.points.CONVENIENCE,
+                AMAZON: scores.AMAZON + option.points.AMAZON,
+                PAYPAY: scores.PAYPAY + option.points.PAYPAY,
             };
             setScores(newScores);
 
@@ -42,7 +52,14 @@ export function QuizApp() {
 
     const handleReset = () => {
         setCurrentQuestionIndex(0);
-        setScores({ REWARD: 0, STATUS: 0, TRAVEL: 0 });
+        setScores({
+            REWARD: 0,
+            STATUS: 0,
+            TRAVEL: 0,
+            CONVENIENCE: 0,
+            AMAZON: 0,
+            PAYPAY: 0
+        });
         setResult(null);
         setSelectedOption(null);
     };

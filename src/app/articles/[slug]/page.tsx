@@ -51,18 +51,29 @@ export default async function ArticlePage({ params }: PageProps) {
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-6 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-900">
                 <div className="max-w-4xl mx-auto space-y-6">
-                    <div className="flex flex-wrap items-center gap-3">
-                        <span className="px-3 py-1 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-tighter">
-                            {article.category}
-                        </span>
-                        {renderStars(article.rating)}
+                    <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                        <div className="flex-1 space-y-6">
+                            <div className="flex flex-wrap items-center gap-3">
+                                <span className="px-3 py-1 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-tighter">
+                                    {article.category}
+                                </span>
+                                {renderStars(article.rating)}
+                            </div>
+                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight">
+                                {article.title}
+                            </h1>
+                            <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
+                                {article.description}
+                            </p>
+                        </div>
+                        <div className="w-full md:w-80 shrink-0">
+                            <img
+                                src={article.image}
+                                alt={article.title}
+                                className="w-full h-auto rounded-3xl shadow-2xl ring-1 ring-slate-200 dark:ring-white/10"
+                            />
+                        </div>
                     </div>
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight">
-                        {article.title}
-                    </h1>
-                    <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl">
-                        {article.description}
-                    </p>
                     <div className="flex items-center gap-4 pt-4 text-xs font-bold text-slate-400">
                         <div className="flex items-center gap-2">
                             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600"></div>

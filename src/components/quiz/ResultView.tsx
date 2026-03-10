@@ -97,6 +97,14 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                 </div>
 
                 <div className="relative z-10 flex flex-col items-center text-center">
+                    <div className="mb-10 relative group">
+                        <div className="absolute -inset-4 bg-white/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity rounded-full" />
+                        <img
+                            src={primary.image}
+                            alt={primary.cardName}
+                            className="relative w-64 sm:w-80 h-auto rounded-3xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500 ring-1 ring-white/20"
+                        />
+                    </div>
                     <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-2xl bg-white/80 dark:bg-black/30 shadow-lg backdrop-blur-sm transition-all duration-500">
                         <svg className={cn("w-10 h-10", color)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             {iconPath}
@@ -271,13 +279,15 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                             <tr className="bg-slate-50 dark:bg-slate-800/50">
                                 <th className="p-6 text-left text-[10px] font-black uppercase tracking-widest text-slate-400 w-1/4">比較項目</th>
                                 <th className="p-6 text-center w-1/3">
-                                    <div className="flex flex-col items-center gap-2">
+                                    <div className="flex flex-col items-center gap-3">
+                                        <img src={primary.image} alt="" className="w-16 h-auto rounded shadow-sm ring-1 ring-slate-200 dark:ring-white/10" />
                                         <span className="px-2 py-0.5 bg-blue-600 text-white text-[8px] font-black rounded-full uppercase">1位: {primary.cardName}</span>
                                     </div>
                                 </th>
                                 {secondaryList.map((res, i) => (
                                     <th key={res.type} className="p-6 text-center w-1/3 border-l border-slate-100 dark:border-slate-800">
-                                        <div className="flex flex-col items-center gap-2">
+                                        <div className="flex flex-col items-center gap-3">
+                                            <img src={res.image} alt="" className="w-16 h-auto rounded shadow-sm ring-1 ring-slate-200 dark:ring-white/10" />
                                             <span className="px-2 py-0.5 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[8px] font-black rounded-full uppercase">{i + 2}位: {res.cardName}</span>
                                         </div>
                                     </th>

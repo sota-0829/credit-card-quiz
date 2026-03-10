@@ -10,6 +10,7 @@ export interface Article {
     cons: string[];
     rating: number; // 0-5
     affiliateUrl: string;
+    image: string;
     updatedAt: string;
 }
 
@@ -23,6 +24,7 @@ export const articles: Article[] = [
         cons: ['年会費が11,000円かかる', '2023年12月のポイント改定で一部還元率ダウン'],
         rating: 4.5,
         affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=YOUR_RAKUTEN_ID',
+        image: '/images/cards/rakuten.png',
         content: `
 ## 楽天プレミアムカードがエンジニアに選ばれる理由
 
@@ -48,6 +50,7 @@ export const articles: Article[] = [
         cons: ['基本のポイント還元率は0.5%と平均的'],
         rating: 4.8,
         affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=YOUR_EPOS_ID',
+        image: '/images/cards/epos.png',
         content: `
 ## エポスカードが「最強のサブカード」と呼ばれる理由
 
@@ -70,6 +73,7 @@ export const articles: Article[] = [
         cons: ['通常の還元率は0.5%とそれほど高くない', '最大還元の条件がタッチ決済に限定される'],
         rating: 4.7,
         affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=YOUR_SMBC_ID',
+        image: '/images/cards/smbc.png',
         content: `
 ## 三井住友カード（NL）が「現代人の必須カード」である理由
 
@@ -89,6 +93,7 @@ export const articles: Article[] = [
         cons: ['40歳以降は申し込めない', 'ポイントの交換ルールが少し複雑'],
         rating: 4.6,
         affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=YOUR_JCB_ID',
+        image: '/images/cards/jcb.png',
         content: `
 ## JCB CARD Wが「デジタルネイティブ世代」に選ばれる理由
 
@@ -105,6 +110,7 @@ JCBが満を持して投入した高還元カード、それが**JCB CARD W**で
         cons: ['海外旅行保険が付帯していない'],
         rating: 4.4,
         affiliateUrl: 'https://px.a8.net/svt/ejp?a8mat=YOUR_PAYPAY_ID',
+        image: '/images/cards/paypay.png',
         content: `
 ## PayPayカードが「キャッシュレス派」に必須な理由
 

@@ -41,6 +41,7 @@ export interface ResultData {
     code2: string;   // ex: '4AZ8K8+3YW1YQ+38L8+BXQOH'
   };
   adPixel?: string;  // ex: 'https://www10.a8.net/0.gif?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH'
+  image: string;      // path to card image
   specs: {
     annualFee: string;
     rewardRate: string;
@@ -101,11 +102,12 @@ export const results: Record<ResultType, ResultData> = {
   REWARD: {
     type: 'REWARD',
     title: '還元率最強・実利重視型',
-    cardName: '楽天プレミアムカード（または楽天カード）',
+    cardName: '楽天カード',
     description: 'あなたは徹底した実利主義のエンジニア。無駄なくザクザクポイントが貯まり、すぐに生活費やガジェット購入に充てられる高還元率カードが最適です。',
     features: ['どこでも高還元率', '貯まったポイントが使いやすい', '年会費の元がすぐ取れる'],
     affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918dce.84286293.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MTY3NDAxLCJhbXAiOmZhbHNlfQ%3D%3D',
     campaignText: '🎉 もれなく新規入会で最大10,000ポイントプレゼント中！',
+    image: '/images/cards/rakuten.png',
     specs: {
       annualFee: '永年無料',
       rewardRate: '1.0%〜',
@@ -121,6 +123,7 @@ export const results: Record<ResultType, ResultData> = {
     features: ['年会費が永年無料', '充実の海外旅行傷害保険が自動付帯', '全国の飲食店や施設で優待割引'],
     affiliateLink: 'https://px.a8.net/svt/ejp?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH',
     campaignText: '✨ 新規入会で2,000円相当のエポスポイントプレゼント！',
+    image: '/images/cards/epos.png',
     adScript: {
       id: 'div_admane_async_1734_658_2971',
       site: '1734',
@@ -145,9 +148,10 @@ export const results: Record<ResultType, ResultData> = {
     title: 'ワンランク上の特権・プレミアム型',
     cardName: '楽天プレミアムカード',
     description: '国内外の空港ラウンジが使い放題になる「プライオリティ・パス」が無料で発行可能。出張や旅行が多く、楽天市場での買い物もお得にしたい方に真の価値を発揮する至高の一枚です。',
-    features: ['世界1,300ヶ所以上の空港ラウンジが無料', '楽天市場での脅威のポイント還元', '充実の国内・海外旅行傷害保険'],
+    features: ['世界1,300ヶ所にのぼる空港ラウンジが無料', '楽天市場での脅威のポイント還元', '充実の国内・海外旅行傷害保険'],
     affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918f0a.735b8dbe.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6NTUwOTk0LCJhbXAiOmZhbHNlfQ%3D%3D',
     campaignText: '✈️ 新規入会＆利用でポイントプレゼント中！',
+    image: '/images/cards/rakuten.png',
     specs: {
       annualFee: '11,000円',
       rewardRate: '1.0%〜',
@@ -163,6 +167,7 @@ export const results: Record<ResultType, ResultData> = {
     features: ['対象店舗で最大7%還元', '年会費永年無料', 'ナンバーレスで万全のセキュリティ'],
     affiliateLink: '#',
     campaignText: '📱 新規入会＆利用で最大ポイントプレゼント！',
+    image: '/images/cards/smbc.png',
     specs: {
       annualFee: '永年無料',
       rewardRate: '0.5%〜7.0%',
@@ -178,6 +183,7 @@ export const results: Record<ResultType, ResultData> = {
     features: ['Amazonやスタバでポイント高還元', '年会費永年無料（39歳以下限定）', '貯めたポイントは直接Amazonで使える'],
     affiliateLink: '#',
     campaignText: '🎁 Amazon.co.jpご利用分がキャッシュバック！',
+    image: '/images/cards/jcb.png',
     specs: {
       annualFee: '永年無料',
       rewardRate: '1.0%〜5.0%',
@@ -193,6 +199,7 @@ export const results: Record<ResultType, ResultData> = {
     features: ['PayPayポイントがどんどん貯まる', '年会費永年無料', 'Yahoo!ショッピングでいつでも高還元'],
     affiliateLink: '#',
     campaignText: '🔥 新規入会でPayPayポイント大量プレゼント中！',
+    image: '/images/cards/paypay.png',
     specs: {
       annualFee: '永年無料',
       rewardRate: '1.0%〜5.0%',

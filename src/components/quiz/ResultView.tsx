@@ -62,7 +62,6 @@ export function ResultView({ results, onReset }: ResultViewProps) {
         // Evaluate embedded brand safe scripts
         results.forEach(r => {
             if (r.adScript && typeof window !== 'undefined') {
-                // Wait for brandsafe_js_async to load
                 const checkAndRun = setInterval(() => {
                     // @ts-ignore
                     if (window.brandsafe_js_async) {
@@ -241,7 +240,6 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                                         解説を読む
                                     </Link>
 
-                                    {/* A8.net Tracking Elements (Secondary) */}
                                     {subResult.adScript && (
                                         <div id={subResult.adScript.id} className="hidden" />
                                     )}
@@ -256,6 +254,107 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                 </div>
             )}
 
+            {/* Comparison Table Section */}
+            <div className="w-full max-w-4xl mx-auto mt-16 px-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+                <div className="text-center mb-8">
+                    <h3 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white mb-2 leading-tight">
+                        スペックを一括比較
+                    </h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                        あなたに特におすすめのカードを並べて比較しました
+                    </p>
+                </div>
+
+                <div className="overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0">
+                    <table className="w-full border-collapse min-w-[600px] bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800">
+                        <thead>
+                            <tr className="bg-slate-50 dark:bg-slate-800/50">
+                                <th className="p-6 text-left text-[10px] font-black uppercase tracking-widest text-slate-400 w-1/4">比較項目</th>
+                                <th className="p-6 text-center w-1/3">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <span className="px-2 py-0.5 bg-blue-600 text-white text-[8px] font-black rounded-full uppercase">1位: {primary.cardName}</span>
+                                    </div>
+                                </th>
+                                {secondaryList.map((res, i) => (
+                                    <th key={res.type} className="p-6 text-center w-1/3 border-l border-slate-100 dark:border-slate-800">
+                                        <div className="flex flex-col items-center gap-2">
+                                            <span className="px-2 py-0.5 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[8px] font-black rounded-full uppercase">{i + 2}位: {res.cardName}</span>
+                                        </div>
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody className="text-sm">
+                            <tr className="border-t border-slate-100 dark:border-slate-800">
+                                <td className="p-6 font-bold text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/20">年会費</td>
+                                <td className="p-6 text-center font-black text-slate-900 dark:text-white">{primary.specs.annualFee}</td>
+                                {secondaryList.map(res => (
+                                    <td key={res.type} className="p-6 text-center font-bold text-slate-700 dark:text-slate-300 border-l border-slate-100 dark:border-slate-800">{res.specs.annualFee}</td>
+                                ))}
+                            </tr>
+                            <tr className="border-t border-slate-100 dark:border-slate-800">
+                                <td className="p-6 font-bold text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/20">還元率</td>
+                                <td className="p-6 text-center font-black text-blue-600 dark:text-blue-400">{primary.specs.rewardRate}</td>
+                                {secondaryList.map(res => (
+                                    <td key={res.type} className="p-6 text-center font-bold text-slate-700 dark:text-slate-300 border-l border-slate-100 dark:border-slate-800">{res.specs.rewardRate}</td>
+                                ))}
+                            </tr>
+                            <tr className="border-t border-slate-100 dark:border-slate-800">
+                                <td className="p-6 font-bold text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/20">ブランド</td>
+                                <td className="p-6 text-center font-black text-slate-900 dark:text-white">
+                                    <div className="flex flex-wrap justify-center gap-1">
+                                        {primary.specs.brands.map(b => (
+                                            <span key={b} className="text-[10px] px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 leading-none">{b}</span>
+                                        ))}
+                                    </div>
+                                </td>
+                                {secondaryList.map(res => (
+                                    <td key={res.type} className="p-6 text-center border-l border-slate-100 dark:border-slate-800">
+                                        <div className="flex flex-wrap justify-center gap-1">
+                                            {res.specs.brands.map(b => (
+                                                <span key={b} className="text-[10px] px-1.5 py-0.5 bg-slate-100 dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 leading-none opacity-80">{b}</span>
+                                            ))}
+                                        </div>
+                                    </td>
+                                ))}
+                            </tr>
+                            <tr className="border-t border-slate-100 dark:border-slate-800">
+                                <td className="p-6 font-bold text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/20">付帯保険</td>
+                                <td className="p-6 text-center font-black text-slate-900 dark:text-white">{primary.specs.insurance}</td>
+                                {secondaryList.map(res => (
+                                    <td key={res.type} className="p-6 text-center font-bold text-slate-700 dark:text-slate-300 border-l border-slate-100 dark:border-slate-800">{res.specs.insurance}</td>
+                                ))}
+                            </tr>
+                            <tr className="border-t border-slate-100 dark:border-slate-800 bg-slate-50/30 dark:bg-slate-800/10">
+                                <td className="p-6"></td>
+                                <td className="p-6 text-center">
+                                    <a
+                                        href={primary.affiliateLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block py-3 px-6 rounded-xl bg-blue-600 text-white font-black text-[13px] hover:scale-105 transition-transform shadow-md"
+                                    >
+                                        申し込む
+                                    </a>
+                                </td>
+                                {secondaryList.map(res => (
+                                    <td key={res.type} className="p-6 text-center border-l border-slate-100 dark:border-slate-800">
+                                        <a
+                                            href={res.affiliateLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-block py-3 px-6 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-black text-[11px] hover:scale-105 transition-transform"
+                                        >
+                                            詳細へ
+                                        </a>
+                                    </td>
+                                ))}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
             {/* Bonus Monetization: DMM FX Sponsor Banner */}
             <div className="w-full max-w-3xl mx-auto mt-12 mb-8 animate-in fade-in duration-1000 delay-500">
                 <div className="relative p-[2px] rounded-2xl bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:shadow-xl transition-all hover:scale-[1.02]">
@@ -265,10 +364,8 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                     <div className="bg-white dark:bg-slate-900 rounded-[14px] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 relative z-0">
                         <div className="relative shrink-0 w-[165px] h-[120px] rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-inner">
                             <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K8+1PX3OY+1WP2+6F9M9" rel="nofollow" target="_blank">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img width="165" height="120" alt="" src="https://www27.a8.net/svt/bgt?aid=260304920104&wid=001&eno=01&mid=s00000008903001079000&mc=1" className="w-full h-full object-cover" />
                             </a>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4AZ8K8+1PX3OY+1WP2+6F9M9" alt="" className="hidden" />
                         </div>
                         <div className="text-center md:text-left flex-grow">
@@ -276,7 +373,7 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                                 クレカを作ったら、次は「投資デビュー」しませんか？
                             </h3>
                             <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-                                DMM FXなら初心者でも最短1時間で取引スタート！お得なキャッシュバックキャンペーンで投資元本をブーストさせるチャンスです。審査待ちの今のうちにチェック👇
+                                DMM FXなら初心者でも最短1時間で取引スタート！キャッシュバックキャンペーンも実施中。審査待ちの今のうちにチェック👇
                             </p>
                             <a
                                 href="https://px.a8.net/svt/ejp?a8mat=4AZ8K8+1PX3OY+1WP2+6F9M9"
@@ -300,18 +397,16 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                     <div className="bg-white dark:bg-slate-900 rounded-[14px] p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 relative z-0">
                         <div className="relative shrink-0 w-[120px] rounded-xl overflow-hidden shadow-inner flex justify-center bg-white border border-slate-100 dark:border-slate-800">
                             <a href="https://px.a8.net/svt/ejp?a8mat=4AZ8K8+1R3YWI+50+2HGLCX" rel="nofollow" target="_blank" className="block w-full max-h-[160px] overflow-hidden">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img width="120" height="600" alt="" src="https://www21.a8.net/svt/bgt?aid=260304920106&wid=001&eno=01&mid=s00000000018015026000&mc=1" className="w-full object-cover object-top" />
                             </a>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4AZ8K8+1R3YWI+50+2HGLCX" alt="" className="hidden" />
                         </div>
                         <div className="text-center md:text-left flex-grow">
                             <h3 className="text-xl font-black text-slate-900 dark:text-white mb-2 leading-tight">
-                                クレカを作ったら、お得な体験を「ブログで発信」しませんか？
+                                お得な体験を「ブログで発信」しませんか？
                             </h3>
                             <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed">
-                                国内シェアNo.1の「お名前.com」ならたった数分で独自ドメインが取得でき、すぐに副業ブログを開設できます！まずは希望のドメインが空いているかチェック👇
+                                国内シェアNo.1の「お名前.com」。たった数分で独自ドメインが取得でき、すぐに副業ブログを開設できます！まずは空きをチェック👇
                             </p>
                             <a
                                 href="https://px.a8.net/svt/ejp?a8mat=4AZ8K8+1R3YWI+50+2HGLCX"
@@ -326,7 +421,7 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                 </div>
             </div>
 
-            {/* M-3: SNS Share Section */}
+            {/* SNS Share & Reset */}
             <div className="flex flex-col items-center gap-4 mt-8">
                 <p className="text-sm font-bold text-slate-500 dark:text-slate-400 tracking-wide uppercase">診断結果をシェアする</p>
                 <div className="flex gap-3">
@@ -357,7 +452,7 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                 </button>
             </div>
 
-            {/* Sticky Mobile CTA for M-1 */}
+            {/* Sticky Mobile CTA */}
             <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 flex justify-center z-50 animate-in slide-in-from-bottom-24 duration-700 md:hidden block shadow-2xl">
                 <a
                     href={primary.affiliateLink}

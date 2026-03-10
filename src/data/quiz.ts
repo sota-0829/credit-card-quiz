@@ -41,6 +41,12 @@ export interface ResultData {
     code2: string;   // ex: '4AZ8K8+3YW1YQ+38L8+BXQOH'
   };
   adPixel?: string;  // ex: 'https://www10.a8.net/0.gif?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH'
+  specs: {
+    annualFee: string;
+    rewardRate: string;
+    brands: string[];
+    insurance: string;
+  };
 }
 
 export const questions: Question[] = [
@@ -100,6 +106,12 @@ export const results: Record<ResultType, ResultData> = {
     features: ['どこでも高還元率', '貯まったポイントが使いやすい', '年会費の元がすぐ取れる'],
     affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918dce.84286293.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MTY3NDAxLCJhbXAiOmZhbHNlfQ%3D%3D',
     campaignText: '🎉 もれなく新規入会で最大10,000ポイントプレゼント中！',
+    specs: {
+      annualFee: '永年無料',
+      rewardRate: '1.0%〜',
+      brands: ['Visa', 'Mastercard', 'JCB', 'AMEX'],
+      insurance: '海外(利用付帯)'
+    }
   },
   STATUS: {
     type: 'STATUS',
@@ -120,7 +132,13 @@ export const results: Record<ResultType, ResultData> = {
       code1: '260304920240',
       code2: '4AZ8K8+3YW1YQ+38L8+BXQOH'
     },
-    adPixel: 'https://www10.a8.net/0.gif?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH'
+    adPixel: 'https://www10.a8.net/0.gif?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH',
+    specs: {
+      annualFee: '永年無料',
+      rewardRate: '0.5%〜',
+      brands: ['Visa'],
+      insurance: '海外(利用付帯)'
+    }
   },
   TRAVEL: {
     type: 'TRAVEL',
@@ -130,6 +148,12 @@ export const results: Record<ResultType, ResultData> = {
     features: ['世界1,300ヶ所以上の空港ラウンジが無料', '楽天市場での脅威のポイント還元', '充実の国内・海外旅行傷害保険'],
     affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918f0a.735b8dbe.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6NTUwOTk0LCJhbXAiOmZhbHNlfQ%3D%3D',
     campaignText: '✈️ 新規入会＆利用でポイントプレゼント中！',
+    specs: {
+      annualFee: '11,000円',
+      rewardRate: '1.0%〜',
+      brands: ['Visa', 'Mastercard', 'JCB', 'AMEX'],
+      insurance: '国内・海外'
+    }
   },
   CONVENIENCE: {
     type: 'CONVENIENCE',
@@ -139,6 +163,12 @@ export const results: Record<ResultType, ResultData> = {
     features: ['対象店舗で最大7%還元', '年会費永年無料', 'ナンバーレスで万全のセキュリティ'],
     affiliateLink: '#',
     campaignText: '📱 新規入会＆利用で最大ポイントプレゼント！',
+    specs: {
+      annualFee: '永年無料',
+      rewardRate: '0.5%〜7.0%',
+      brands: ['Visa', 'Mastercard'],
+      insurance: '海外(利用付帯)'
+    }
   },
   AMAZON: {
     type: 'AMAZON',
@@ -148,6 +178,12 @@ export const results: Record<ResultType, ResultData> = {
     features: ['Amazonやスタバでポイント高還元', '年会費永年無料（39歳以下限定）', '貯めたポイントは直接Amazonで使える'],
     affiliateLink: '#',
     campaignText: '🎁 Amazon.co.jpご利用分がキャッシュバック！',
+    specs: {
+      annualFee: '永年無料',
+      rewardRate: '1.0%〜5.0%',
+      brands: ['JCB'],
+      insurance: '海外(利用付帯)'
+    }
   },
   PAYPAY: {
     type: 'PAYPAY',
@@ -157,5 +193,11 @@ export const results: Record<ResultType, ResultData> = {
     features: ['PayPayポイントがどんどん貯まる', '年会費永年無料', 'Yahoo!ショッピングでいつでも高還元'],
     affiliateLink: '#',
     campaignText: '🔥 新規入会でPayPayポイント大量プレゼント中！',
+    specs: {
+      annualFee: '永年無料',
+      rewardRate: '1.0%〜5.0%',
+      brands: ['Visa', 'Mastercard', 'JCB'],
+      insurance: 'なし'
+    }
   }
 };

@@ -27,8 +27,11 @@ export default function Home() {
 
       <footer className="w-full border-t border-slate-200 dark:border-slate-800 mt-20 py-8 px-6 text-center text-sm text-slate-500 dark:text-slate-500 space-y-3">
         <p>当サイトはアフィリエイトプログラムに参加しています。リンク経由で申し込みが行われた場合、運営者に報酬が支払われることがあります。</p>
-        <div className="flex justify-center gap-4 text-xs">
-          <Link href="/articles" className="hover:text-blue-600 transition-colors underline underline-offset-4">カード徹底解説記事一覧</Link>
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs">
+          <Link href="/articles" className="hover:text-blue-600 transition-colors underline underline-offset-4">記事一覧</Link>
+          <Link href="/about" className="hover:text-blue-600 transition-colors underline underline-offset-4">運営者情報</Link>
+          <Link href="/privacy" className="hover:text-blue-600 transition-colors underline underline-offset-4">プライバシーポリシー</Link>
+          <Link href="/contact" className="hover:text-blue-600 transition-colors underline underline-offset-4">お問い合わせ</Link>
         </div>
         <p className="text-xs text-slate-400">※ 診断結果はあくまで参考情報です。お申し込み前に各カード会社の公式サイトで最新情報をご確認ください。</p>
         <p className="text-xs text-slate-400">© {new Date().getFullYear()} クレジットカード最適化診断</p>

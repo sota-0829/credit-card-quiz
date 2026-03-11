@@ -24,6 +24,9 @@ export async function GET(request: Request) {
             CONVENIENCE: '#059669', // emerald-600
             AMAZON: '#e11d48', // rose-600
             PAYPAY: '#dc2626', // red-600
+            GENERAL: '#475569', // slate-600
+            GOLD: '#ca8a04', // yellow-600
+            SPECIFIC: '#4f46e5', // indigo-600
             DEFAULT: '#3b82f6'  // blue-500
         };
 

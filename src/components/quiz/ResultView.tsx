@@ -35,6 +35,21 @@ const typeConfig: Record<ResultType, { color: string; bgClass: string; iconPath:
         color: "text-red-500 dark:text-red-400",
         bgClass: "bg-gradient-to-br from-red-50 to-rose-100 dark:from-red-950/40 dark:to-rose-900/40",
         iconPath: <><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></>
+    },
+    GENERAL: {
+        color: "text-slate-600 dark:text-slate-400",
+        bgClass: "bg-gradient-to-br from-slate-50 to-zinc-100 dark:from-slate-950/40 dark:to-zinc-900/40",
+        iconPath: <circle cx="12" cy="12" r="10" />
+    },
+    GOLD: {
+        color: "text-yellow-600 dark:text-yellow-400",
+        bgClass: "bg-gradient-to-br from-yellow-50 to-amber-100 dark:from-yellow-950/40 dark:to-amber-900/40",
+        iconPath: <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22h10c0-1.76-.85-3.25-2.03-3.79-.5-.23-.97-.66-.97-1.21v-2.34c0-1.07 1.54-1.23 1.54-2.81 0-1.12-.88-2.03-1.97-2.03H10.4c-1.09 0-1.97.91-1.97 2.03 0 1.58 1.57 1.74 1.57 2.81Z" />
+    },
+    SPECIFIC: {
+        color: "text-indigo-600 dark:text-indigo-400",
+        bgClass: "bg-gradient-to-br from-indigo-50 to-blue-100 dark:from-indigo-950/40 dark:to-blue-900/40",
+        iconPath: <path d="m11 17 2 2 4-4" />
     }
 };
 
@@ -173,17 +188,16 @@ export function ResultView({ results, onReset }: ResultViewProps) {
 
                         <Link
                             href={
-                                primary.type === 'REWARD' || primary.type === 'TRAVEL'
-                                    ? '/articles/rakuten-premium-card-review'
-                                    : primary.type === 'STATUS'
-                                        ? '/articles/epos-card-travel-insurance'
-                                        : primary.type === 'CONVENIENCE'
-                                            ? '/articles/smbc-card-nl-review'
-                                            : primary.type === 'AMAZON'
-                                                ? '/articles/jcb-card-w-review'
-                                                : primary.type === 'PAYPAY'
-                                                    ? '/articles/paypay-card-review'
-                                                    : '#'
+                                primary.type === 'REWARD' ? '/articles/rakuten-card-review' :
+                                    primary.type === 'TRAVEL' ? '/articles/rakuten-premium-card-review' :
+                                        primary.type === 'STATUS' ? '/articles/epos-card-travel-insurance' :
+                                            primary.type === 'CONVENIENCE' ? '/articles/smbc-card-nl-review' :
+                                                primary.type === 'AMAZON' ? '/articles/jcb-card-w-review' :
+                                                    primary.type === 'PAYPAY' ? '/articles/paypay-card-review' :
+                                                        primary.type === 'GENERAL' ? '/articles/recruit-card-review' :
+                                                            primary.type === 'GOLD' ? '/articles/smbc-gold-nl-review' :
+                                                                primary.type === 'SPECIFIC' ? '/articles/mufg-card-review' :
+                                                                    '#'
                             }
                             className="mt-6 text-sm font-bold text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors underline underline-offset-4"
                         >

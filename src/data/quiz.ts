@@ -1,4 +1,4 @@
-export type ResultType = 'REWARD' | 'STATUS' | 'TRAVEL' | 'CONVENIENCE' | 'AMAZON' | 'PAYPAY';
+export type ResultType = 'REWARD' | 'STATUS' | 'TRAVEL' | 'CONVENIENCE' | 'AMAZON' | 'PAYPAY' | 'GENERAL' | 'GOLD' | 'SPECIFIC';
 
 export interface Score {
   REWARD: number;
@@ -7,6 +7,9 @@ export interface Score {
   CONVENIENCE: number;
   AMAZON: number;
   PAYPAY: number;
+  GENERAL: number;
+  GOLD: number;
+  SPECIFIC: number;
 }
 
 export interface Option {
@@ -55,45 +58,45 @@ export const questions: Question[] = [
     id: 1,
     title: "月のクレジットカードのおおよその決済額はどれくらいですか？",
     options: [
-      { text: "10万円未満", points: { REWARD: 0, STATUS: 1, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 1, PAYPAY: 1 } },
-      { text: "10万円〜30万円", points: { REWARD: 2, STATUS: 1, TRAVEL: 1, CONVENIENCE: 1, AMAZON: 2, PAYPAY: 2 } },
-      { text: "30万円以上", points: { REWARD: 1, STATUS: 0, TRAVEL: 3, CONVENIENCE: 0, AMAZON: 1, PAYPAY: 0 } },
+      { text: "10万円未満", points: { REWARD: 1, STATUS: 2, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 1, PAYPAY: 1, GENERAL: 1, GOLD: 0, SPECIFIC: 2 } },
+      { text: "10万円〜30万円", points: { REWARD: 2, STATUS: 1, TRAVEL: 1, CONVENIENCE: 1, AMAZON: 2, PAYPAY: 2, GENERAL: 2, GOLD: 2, SPECIFIC: 1 } },
+      { text: "30万円以上", points: { REWARD: 1, STATUS: 0, TRAVEL: 4, CONVENIENCE: 0, AMAZON: 1, PAYPAY: 0, GENERAL: 1, GOLD: 4, SPECIFIC: 0 } },
     ],
   },
   {
     id: 2,
     title: "出張や旅行に行く頻度はどの程度ですか？",
     options: [
-      { text: "ほとんど行かない", points: { REWARD: 1, STATUS: 0, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 2 } },
-      { text: "年に1〜2回程度", points: { REWARD: 2, STATUS: 2, TRAVEL: 1, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
-      { text: "年に3回以上（よく行く）", points: { REWARD: 0, STATUS: 1, TRAVEL: 3, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
+      { text: "ほとんど行かない", points: { REWARD: 1, STATUS: 0, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 2, GENERAL: 2, GOLD: 0, SPECIFIC: 2 } },
+      { text: "年に1〜2回程度", points: { REWARD: 2, STATUS: 2, TRAVEL: 1, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0, GENERAL: 1, GOLD: 1, SPECIFIC: 0 } },
+      { text: "年に3回以上（よく行く）", points: { REWARD: 0, STATUS: 2, TRAVEL: 4, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0, GENERAL: 0, GOLD: 3, SPECIFIC: 0 } },
     ],
   },
   {
     id: 3,
     title: "最もよく利用するお店・サービスは次のうちどれですか？",
     options: [
-      { text: "コンビニやマクドナルドなどの飲食チェーン", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 4, AMAZON: 0, PAYPAY: 0 } },
-      { text: "Amazonやスターバックス", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 0, AMAZON: 4, PAYPAY: 0 } },
-      { text: "楽天市場やYahoo!ショッピング", points: { REWARD: 3, STATUS: 0, TRAVEL: 1, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 2 } },
+      { text: "コンビニやマクドナルドなどの飲食チェーン", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 5, AMAZON: 0, PAYPAY: 0, GENERAL: 0, GOLD: 2, SPECIFIC: 4 } },
+      { text: "Amazonやスターバックス", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 0, AMAZON: 5, PAYPAY: 0, GENERAL: 1, GOLD: 1, SPECIFIC: 0 } },
+      { text: "楽天市場やYahoo!ショッピング", points: { REWARD: 4, STATUS: 0, TRAVEL: 1, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 3, GENERAL: 0, GOLD: 0, SPECIFIC: 0 } },
     ],
   },
   {
     id: 4,
     title: "普段お使いのスマホキャリアやメインのスマホ決済は？",
     options: [
-      { text: "ソフトバンク/Y!mobile・PayPayをよく使う", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 4 } },
-      { text: "楽天モバイル・楽天ペイをよく使う", points: { REWARD: 3, STATUS: 0, TRAVEL: 2, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
-      { text: "特にこだわりはない・その他", points: { REWARD: 1, STATUS: 2, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 1 } },
+      { text: "ソフトバンク/Y!mobile・PayPayをよく使う", points: { REWARD: 0, STATUS: 0, TRAVEL: 0, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 5, GENERAL: 1, GOLD: 1, SPECIFIC: 0 } },
+      { text: "楽天モバイル・楽天ペイをよく使う", points: { REWARD: 5, STATUS: 0, TRAVEL: 3, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0, GENERAL: 0, GOLD: 0, SPECIFIC: 0 } },
+      { text: "特にこだわりはない・その他", points: { REWARD: 1, STATUS: 2, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 1, GENERAL: 3, GOLD: 2, SPECIFIC: 2 } },
     ],
   },
   {
     id: 5,
     title: "クレジットカードの「年会費」に対するお考えは？",
     options: [
-      { text: "絶対に無料がいい", points: { REWARD: 2, STATUS: 1, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 2 } },
-      { text: "海外旅行保険等のサポートが欲しい（無料希望）", points: { REWARD: 0, STATUS: 3, TRAVEL: 0, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
-      { text: "数万円払ってでもラウンジ等の豪華な特権が欲しい", points: { REWARD: 0, STATUS: 0, TRAVEL: 4, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0 } },
+      { text: "絶対に無料がいい", points: { REWARD: 2, STATUS: 1, TRAVEL: 0, CONVENIENCE: 2, AMAZON: 2, PAYPAY: 2, GENERAL: 3, GOLD: 0, SPECIFIC: 2 } },
+      { text: "保険や優待などのメリットがあれば許容できる", points: { REWARD: 1, STATUS: 4, TRAVEL: 1, CONVENIENCE: 1, AMAZON: 1, PAYPAY: 1, GENERAL: 1, GOLD: 3, SPECIFIC: 1 } },
+      { text: "数万円払ってでも豪華な特権が欲しい", points: { REWARD: 0, STATUS: 1, TRAVEL: 5, CONVENIENCE: 0, AMAZON: 0, PAYPAY: 0, GENERAL: 0, GOLD: 3, SPECIFIC: 0 } },
     ],
   },
 ];
@@ -101,28 +104,28 @@ export const questions: Question[] = [
 export const results: Record<ResultType, ResultData> = {
   REWARD: {
     type: 'REWARD',
-    title: '還元率最強・実利重視型',
+    title: '楽天経済圏の必須カード',
     cardName: '楽天カード',
-    description: 'あなたは徹底した実利主義のエンジニア。無駄なくザクザクポイントが貯まり、すぐに生活費やガジェット購入に充てられる高還元率カードが最適です。',
-    features: ['どこでも高還元率', '貯まったポイントが使いやすい', '年会費の元がすぐ取れる'],
+    description: '楽天市場での買い物が常に3%以上の還元になり、楽天ポイントを日常的に貯めて使いたい方に最適です。会員ランクに応じて還元率がさらに上がるSPUも魅力です。',
+    features: ['楽天市場でいつでもポイント3倍以上', '街のお店や楽天ペイでもポイントが使える', '新規入会キャンペーンが非常に手厚い'],
     affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918dce.84286293.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6MTY3NDAxLCJhbXAiOmZhbHNlfQ%3D%3D',
-    campaignText: '🎉 もれなく新規入会で最大10,000ポイントプレゼント中！',
+    campaignText: '🎉 もれなく新規入会で楽天ポイントプレゼント中！',
     image: '/images/cards/rakuten.png',
     specs: {
       annualFee: '永年無料',
-      rewardRate: '1.0%〜',
+      rewardRate: '1.0%〜3.0%',
       brands: ['Visa', 'Mastercard', 'JCB', 'AMEX'],
       insurance: '海外(利用付帯)'
     }
   },
   STATUS: {
     type: 'STATUS',
-    title: '無料＆手厚い保険・サブカード型',
+    title: '優待と旅行保険のサブカード',
     cardName: 'エポスカード',
-    description: 'メインのカードとは別に、持っているだけで安心と恩恵を受けられる優秀なサブカードです。年会費が永年無料で、特に充実した海外旅行傷害保険などの特典が魅力です。',
-    features: ['年会費が永年無料', '充実の海外旅行傷害保険が自動付帯', '全国の飲食店や施設で優待割引'],
+    description: '持っているだけで全国1万店以上の施設で優待が受けられる最強のサブカード。年会費無料ながら海外旅行保険も付帯し、マルイでの即日発行も可能です。',
+    features: ['全国1万店以上の飲食店・施設で割引', '年会費無料で海外旅行傷害保険が付帯', 'マルイ店舗での即日発行が可能'],
     affiliateLink: 'https://px.a8.net/svt/ejp?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH',
-    campaignText: '✨ 新規入会で2,000円相当のエポスポイントプレゼント！',
+    campaignText: '✨ 新規入会で2,000円相当のエポスポイント！',
     image: '/images/cards/epos.png',
     adScript: {
       id: 'div_admane_async_1734_658_2971',
@@ -138,7 +141,7 @@ export const results: Record<ResultType, ResultData> = {
     adPixel: 'https://www10.a8.net/0.gif?a8mat=4AZ8K8+3YW1YQ+38L8+BXQOH',
     specs: {
       annualFee: '永年無料',
-      rewardRate: '0.5%〜',
+      rewardRate: '0.5%',
       brands: ['Visa'],
       insurance: '海外(利用付帯)'
     }
@@ -147,26 +150,26 @@ export const results: Record<ResultType, ResultData> = {
     type: 'TRAVEL',
     title: 'ワンランク上の特権・プレミアム型',
     cardName: '楽天プレミアムカード',
-    description: '国内外の空港ラウンジが使い放題になる「プライオリティ・パス」が無料で発行可能。出張や旅行が多く、楽天市場での買い物もお得にしたい方に真の価値を発揮する至高の一枚です。',
-    features: ['世界1,300ヶ所にのぼる空港ラウンジが無料', '楽天市場での脅威のポイント還元', '充実の国内・海外旅行傷害保険'],
+    description: '世界中の空港ラウンジが使い放題になる「プライオリティ・パス」が無料で発行可能。楽天市場での買い物も常時5倍以上になる、出張・旅行が多い方向けの至高の一枚です。',
+    features: ['プライオリティ・パスが無料で発行可能', '楽天市場でのポイント還元が驚異の5倍以上', '国内・海外旅行傷害保険が最高5,000万円'],
     affiliateLink: 'https://hb.afl.rakuten.co.jp/hsc/51918f0a.735b8dbe.51918dcf.3ba9ee28/?link_type=hybrid_url&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJoeWJyaWRfdXJsIiwiY29sIjoxLCJjYXQiOjEsImJhbiI6NTUwOTk0LCJhbXAiOmZhbHNlfQ%3D%3D',
-    campaignText: '✈️ 新規入会＆利用でポイントプレゼント中！',
+    campaignText: '✈️ プレミアムカード限定の入会特典あり！',
     image: '/images/cards/rakuten.png',
     specs: {
       annualFee: '11,000円',
-      rewardRate: '1.0%〜',
+      rewardRate: '1.0%〜5.0%',
       brands: ['Visa', 'Mastercard', 'JCB', 'AMEX'],
       insurance: '国内・海外'
     }
   },
   CONVENIENCE: {
     type: 'CONVENIENCE',
-    title: 'コンビニ・ファストフード特化型',
+    title: 'コンビニ・飲食店の覇者',
     cardName: '三井住友カード（NL）',
-    description: '対象のコンビニや飲食店でスマホの対象のタッチ決済を利用すると、最大7％還元という驚異的な還元率を誇る一枚。普段のちょっとした買い物が一番お得になる、現代人の必須カードです。',
-    features: ['対象店舗で最大7%還元', '年会費永年無料', 'ナンバーレスで万全のセキュリティ'],
+    description: '対象のコンビニや飲食店でスマホの対象のタッチ決済を利用すると、最大7％還元という驚異的な還元率を誇る一枚。ナンバーレスでセキュリティも万全です。',
+    features: ['対象店舗で最大7%還元', '年会費永年無料', '審査後最短10秒で即時発行可能'],
     affiliateLink: '#',
-    campaignText: '📱 新規入会＆利用で最大ポイントプレゼント！',
+    campaignText: '📱 新規入会＆利用でVポイントプレゼント！',
     image: '/images/cards/smbc.png',
     specs: {
       annualFee: '永年無料',
@@ -177,34 +180,82 @@ export const results: Record<ResultType, ResultData> = {
   },
   AMAZON: {
     type: 'AMAZON',
-    title: 'Amazon・スタバ特化型',
+    title: 'Amazon・スタバ特化の万能カード',
     cardName: 'JCB CARD W',
-    description: 'Amazonやスターバックスなどの「JCBオリジナルシリーズパートナー」店舗でポイントが倍増する39歳以下限定の特化カード。年会費も永年無料です。',
-    features: ['Amazonやスタバでポイント高還元', '年会費永年無料（39歳以下限定）', '貯めたポイントは直接Amazonで使える'],
+    description: '39歳以下限定。Amazonやセブン-イレブンで2%、スターバックスのモバイルオーダーで最大10.5%という圧倒的な還元率を誇ります。',
+    features: ['Amazonやスタバでポイント高還元', '年会費永年無料（39歳以下限定）', '貯めたポイントはAmazonでそのまま利用可能'],
     affiliateLink: '#',
-    campaignText: '🎁 Amazon.co.jpご利用分がキャッシュバック！',
+    campaignText: '🎁 Amazon.co.jpご利用分キャッシュバック実施中！',
     image: '/images/cards/jcb.png',
     specs: {
       annualFee: '永年無料',
-      rewardRate: '1.0%〜5.0%',
+      rewardRate: '1.0%〜10.5%',
       brands: ['JCB'],
       insurance: '海外(利用付帯)'
     }
   },
   PAYPAY: {
     type: 'PAYPAY',
-    title: 'スマホ・QR決済経済圏型',
+    title: 'PayPayユーザーに必須の経済圏型',
     cardName: 'PayPayカード',
-    description: '日本中で使える「PayPay」にチャージできる唯一のクレジットカード。SoftBankやY!mobileユーザーならさらにポイントがザクザク貯まる、経済圏特化の最強カードです。',
-    features: ['PayPayポイントがどんどん貯まる', '年会費永年無料', 'Yahoo!ショッピングでいつでも高還元'],
+    description: 'PayPayに直接チャージできる唯一のカード。Yahoo!ショッピングやLOHACOでの利用でも最大5%還元され、PayPayポイントがどんどん貯まります。',
+    features: ['PayPayポイントが直接貯まる', 'Yahoo!ショッピングでいつでも最大5%還元', '年会費永年無料でナンバーレス仕様'],
     affiliateLink: '#',
-    campaignText: '🔥 新規入会でPayPayポイント大量プレゼント中！',
+    campaignText: '🔥 新規入会でPayPayポイントプレゼント！',
     image: '/images/cards/paypay.png',
     specs: {
       annualFee: '永年無料',
       rewardRate: '1.0%〜5.0%',
       brands: ['Visa', 'Mastercard', 'JCB'],
       insurance: 'なし'
+    }
+  },
+  GENERAL: {
+    type: 'GENERAL',
+    title: 'どこでも高還元・メインカード型',
+    cardName: 'リクルートカード',
+    description: '業界最高水準の「基本還元率1.2%」が最大の強み。公共料金の支払いでも還元率が下がらず、1枚のカードで効率的にポイントを貯めたい方に最適です。',
+    features: ['場所を選ばず常に1.2%還元', '公共料金の支払いでも高還元', '貯まったポイントはPontaやdポイントに交換可能'],
+    affiliateLink: '#',
+    campaignText: '💳 新規入会＆利用で最大ポイントプレゼント！',
+    image: '/images/cards/recruit.png',
+    specs: {
+      annualFee: '永年無料',
+      rewardRate: '1.2%',
+      brands: ['Visa', 'Mastercard', 'JCB'],
+      insurance: '国内・海外'
+    }
+  },
+  GOLD: {
+    type: 'GOLD',
+    title: 'コスパ最強のゴールドカード',
+    cardName: '三井住友カード ゴールド（NL）',
+    description: '年間100万円利用で翌年以降の年会費が永年無料に。さらに毎年1万ポイントのボーナスが付与され、実質的な還元率も非常に高いゴールドカードです。',
+    features: ['100万円修行達成で年会費が永年無料', '毎年最大10,000ポイントの継続特典', '空港ラウンジ無料利用などのゴールド特典'],
+    affiliateLink: '#',
+    campaignText: '🏆 100万円利用で年会費永年無料のチャンス！',
+    image: '/images/cards/smbc_gold.png',
+    specs: {
+      annualFee: '5,500円(条件付無料)',
+      rewardRate: '0.5%〜7.0%',
+      brands: ['Visa', 'Mastercard'],
+      insurance: '国内・海外'
+    }
+  },
+  SPECIFIC: {
+    type: 'SPECIFIC',
+    title: '対象店舗で最大20%の超高還元',
+    cardName: '三菱ＵＦＪカード',
+    description: 'セブン-イレブン、ローソン、松屋などで最大20%還元。アプリへのログイン等の条件クリアで驚異的な還元率を叩き出せる、特定店舗利用者には最強のカードです。',
+    features: ['コンビニや松屋で最大20%還元', '年会費は年1回の利用で無料', '不正利用の24時間モニタリングで安心'],
+    affiliateLink: '#',
+    campaignText: '🔥 特定店舗での超高還元キャンペーン中！',
+    image: '/images/cards/mufg.png',
+    specs: {
+      annualFee: '無料(年1回利用)',
+      rewardRate: '0.5%〜20.0%',
+      brands: ['Visa', 'Mastercard', 'JCB', 'AMEX'],
+      insurance: '海外'
     }
   }
 };

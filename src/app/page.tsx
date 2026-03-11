@@ -15,6 +15,9 @@ export async function generateMetadata({ searchParams }: { searchParams: { resul
 
   return {
     title: ogTitle,
+    alternates: {
+      canonical: resultType ? `/?result=${resultType}` : '/',
+    },
     openGraph: {
       title: ogTitle,
       images: [ogImage],
@@ -27,8 +30,27 @@ export async function generateMetadata({ searchParams }: { searchParams: { resul
 }
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "クレジットカード最適化診断",
+    "url": "https://credit-optimizer.jp",
+    "applicationCategory": "FinancialApplication",
+    "operatingSystem": "Any",
+    "description": "5つの質問に答えるだけで、あなたのライフスタイルに最適なクレジットカードが見つかる無料診断ツール。",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    }
+  };
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-24 bg-slate-50 dark:bg-black font-sans selection:bg-primary/30">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
         <div className="w-full max-w-4xl mx-auto space-y-8">
           <div className="space-y-4">

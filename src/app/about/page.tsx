@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: '運営者情報',
+    description: 'クレジットカード最適化診断「Credit Optimizer」の運営目的、専門性、中立性について紹介します。',
+    alternates: {
+        canonical: '/about',
+    },
+};
 
 export default function AboutPage() {
     return (

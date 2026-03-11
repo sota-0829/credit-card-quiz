@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'プライバシーポリシー・免責事項',
+    description: '当サイトにおける個人情報の取り扱い、広告配信、免責事項について定めています。',
+    alternates: {
+        canonical: '/privacy',
+    },
+};
 
 export default function PrivacyPage() {
     return (

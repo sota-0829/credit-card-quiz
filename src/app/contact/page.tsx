@@ -1,4 +1,13 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'お問い合わせ',
+    description: 'Credit Optimizerに関するご意見、ご要望、広告掲載などのご相談はこちらから。',
+    alternates: {
+        canonical: '/contact',
+    },
+};
 
 export default function ContactPage() {
     return (

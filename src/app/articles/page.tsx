@@ -1,5 +1,14 @@
 import { articles } from "@/data/articles";
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'クレジットカード徹底解説 | ナレッジベース',
+    description: '各クレジットカードのスペック、還元率、メリット・デメリットを専門チームが徹底比較・解説。',
+    alternates: {
+        canonical: '/articles',
+    },
+};
 
 export default function ArticlesIndexPage() {
     return (

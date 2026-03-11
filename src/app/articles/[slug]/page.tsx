@@ -1,9 +1,45 @@
 import { articles } from "@/data/articles";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from 'next';
 
 interface PageProps {
     params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const article = articles.find((a) => a.slug === slug);
+
+    if (!article) return {};
+
+    return {
+        title: article.title,
+        description: article.description,
+        alternates: {
+            canonical: `/articles/${slug}`,
+        },
+        openGraph: {
+            title: article.title,
+            description: article.description,
+            type: 'article',
+            url: `/articles/${slug}`,
+            images: [
+                {
+                    url: article.image,
+                    width: 1200,
+                    height: 630,
+                    alt: article.title,
+                },
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: article.title,
+            description: article.description,
+            images: [article.image],
+        },
+    };
 }
 
 export default async function ArticlePage({ params }: PageProps) {
@@ -31,8 +67,42 @@ export default async function ArticlePage({ params }: PageProps) {
         );
     };
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+            "@type": "FinancialProduct",
+            "name": article.title.split('の')[0] || article.title,
+            "image": `https://credit-optimizer.jp${article.image}`
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": article.rating,
+            "bestRating": "5"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Credit Optimizer Team"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Credit Optimizer",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://credit-optimizer.jp/logo.png"
+            }
+        },
+        "datePublished": article.updatedAt,
+        "headline": article.title,
+        "description": article.description
+    };
+
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-black font-sans selection:bg-blue-100 selection:text-blue-900">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Nav */}
             <header className="fixed top-0 left-0 right-0 bg-white/70 dark:bg-black/70 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 z-50">
                 <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">

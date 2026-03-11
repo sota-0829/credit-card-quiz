@@ -17,7 +17,11 @@ const siteDescription =
   "5つの質問に答えるだけで、あなたのライフスタイルに最適なクレジットカードが見つかる無料診断。還元率重視・ステータス重視・旅行特化型、それぞれの最強カードを提案します。";
 
 export const metadata: Metadata = {
-  title: siteTitle,
+  metadataBase: new URL("https://credit-optimizer.jp"),
+  title: {
+    default: siteTitle,
+    template: `%s | クレジットカード最適化診断`
+  },
   description: siteDescription,
   keywords: [
     "クレジットカード",
@@ -25,25 +29,39 @@ export const metadata: Metadata = {
     "診断",
     "還元率",
     "比較",
-    "最適",
+    "最強",
     "ポイント",
+    "節約",
     "マイル",
+    "ポイ活"
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
-    type: "website",
-    locale: "ja_JP",
+    url: "/",
     siteName: "クレジットカード最適化診断",
+    locale: "ja_JP",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
+    creator: "@credit_optimizer",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

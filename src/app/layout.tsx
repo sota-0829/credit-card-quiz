@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "クレジットカード最適化診断 | あなたに最適な1枚を見つけよう";
+const siteTitle = "【2024最新】クレジットカードおすすめ診断 | あなたに最強の1枚を";
 const siteDescription =
-  "5つの質問に答えるだけで、あなたのライフスタイルに最適なクレジットカードが見つかる無料診断。還元率重視・ステータス重視・旅行特化型、それぞれの最強カードを提案します。";
+  "「クレジットカード おすすめ」で迷っていませんか？5つの質問に答えるだけで、あなたのライフスタイルに最適な最強の1枚を無料診断。還元率・年会費・特典を徹底比較。";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://credit-optimizer.jp"),

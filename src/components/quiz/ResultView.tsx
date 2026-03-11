@@ -145,6 +145,10 @@ export function ResultView({ results, onReset }: ResultViewProps) {
 
                 <div className="relative z-10 flex flex-col items-center text-center">
                     <div className="mb-10 relative group">
+                        {/* No.1 Ranking Badge */}
+                        <div className="absolute -top-6 -left-6 z-20 bg-gradient-to-br from-yellow-400 to-amber-600 text-white font-black px-6 py-2 rounded-full shadow-lg border-2 border-white transform -rotate-12 animate-in zoom-in duration-500 delay-300">
+                            人気第 1 位
+                        </div>
                         <div className="absolute -inset-4 bg-white/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity rounded-full" />
                         <img
                             src={primary.image}
@@ -152,6 +156,11 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                             className="relative w-64 sm:w-80 h-auto rounded-3xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500 ring-1 ring-white/20"
                         />
                     </div>
+
+                    <div className="mb-4 inline-block px-4 py-1.5 bg-white/40 dark:bg-black/20 backdrop-blur-sm rounded-full text-xs font-bold text-slate-800 dark:text-slate-200 border border-white/20">
+                        {primary.targetLabel}
+                    </div>
+
                     <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-2xl bg-white/80 dark:bg-black/30 shadow-lg backdrop-blur-sm transition-all duration-500">
                         <svg className={cn("w-10 h-10", color)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             {iconPath}
@@ -253,13 +262,16 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                             return (
                                 <div key={index} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
                                     <div className="flex items-center gap-3 mb-4">
-                                        <div className={cn("w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800", subConfig.color)}>
+                                        <div className={cn("w-10 h-10 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 relative", subConfig.color)}>
+                                            <div className="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-slate-800 dark:bg-white text-white dark:text-slate-900 flex items-center justify-center text-[10px] font-black border-2 border-white dark:border-slate-800">
+                                                {index + 2}
+                                            </div>
                                             <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                 {subConfig.iconPath}
                                             </svg>
                                         </div>
                                         <div>
-                                            <span className={cn("text-xs font-bold uppercase", subConfig.color)}>{subResult.title}</span>
+                                            <span className={cn("text-[10px] font-bold uppercase block opacity-70", subConfig.color)}>{subResult.targetLabel}</span>
                                             <h4 className="font-bold text-slate-900 dark:text-white leading-tight">{subResult.cardName}</h4>
                                         </div>
                                     </div>
@@ -343,14 +355,18 @@ export function ResultView({ results, onReset }: ResultViewProps) {
                         <tbody className="text-sm">
                             <tr className="border-t border-slate-100 dark:border-slate-800">
                                 <td className="p-6 font-bold text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/20">年会費</td>
-                                <td className="p-6 text-center font-black text-slate-900 dark:text-white">{primary.specs.annualFee}</td>
+                                <td className={cn("p-6 text-center font-black", primary.specs.annualFee.includes('無料') ? "text-emerald-600 bg-emerald-50/30" : "text-slate-900 dark:text-white")}>
+                                    {primary.specs.annualFee}
+                                </td>
                                 {secondaryList.map(res => (
-                                    <td key={res.type} className="p-6 text-center font-bold text-slate-700 dark:text-slate-300 border-l border-slate-100 dark:border-slate-800">{res.specs.annualFee}</td>
+                                    <td key={res.type} className={cn("p-6 text-center font-bold border-l border-slate-100 dark:border-slate-800", res.specs.annualFee.includes('無料') ? "text-emerald-600 bg-emerald-50/20" : "text-slate-700 dark:text-slate-300")}>
+                                        {res.specs.annualFee}
+                                    </td>
                                 ))}
                             </tr>
                             <tr className="border-t border-slate-100 dark:border-slate-800">
                                 <td className="p-6 font-bold text-slate-500 dark:text-slate-400 bg-slate-50/50 dark:bg-slate-800/20">還元率</td>
-                                <td className="p-6 text-center font-black text-blue-600 dark:text-blue-400">{primary.specs.rewardRate}</td>
+                                <td className="p-6 text-center font-black text-blue-600 dark:text-blue-400 bg-blue-50/30">{primary.specs.rewardRate}</td>
                                 {secondaryList.map(res => (
                                     <td key={res.type} className="p-6 text-center font-bold text-slate-700 dark:text-slate-300 border-l border-slate-100 dark:border-slate-800">{res.specs.rewardRate}</td>
                                 ))}

@@ -102,10 +102,42 @@ export function ResultView({ results, onReset }: ResultViewProps) {
     const { color, bgClass, iconPath } = typeConfig[primary.type];
 
     return (
-        <div className="w-full max-w-4xl mx-auto p-4 sm:p-6 pb-24 transition-all duration-700">
+        <div className="w-full max-w-4xl mx-auto p-4 sm:p-6 pb-24 animate-in fade-in slide-in-from-bottom-12 duration-1000 ease-out">
+            <style jsx global>{`
+                @keyframes confetti {
+                    0% { transform: translateY(0) rotate(0); opacity: 1; }
+                    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+                }
+                .confetti {
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    background: #3b82f6;
+                    top: -10px;
+                    z-index: 0;
+                    pointer-events: none;
+                }
+            `}</style>
+
             {/* Primary Result */}
-            <div className={cn("rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden transition-all mb-12", bgClass)}>
-                <div className="absolute -top-24 -right-24 opacity-10 animate-[spin_50s_linear_infinite]">
+            <div className={cn("rounded-[3rem] p-8 sm:p-16 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] relative overflow-hidden transition-all mb-16 border border-white/40 dark:border-white/5", bgClass)}>
+                {/* Visual Flair: Animated Confetti (CSS only simulation) */}
+                <div className="absolute inset-0 pointer-events-none opacity-20 dark:opacity-10 overflow-hidden">
+                    {[...Array(20)].map((_, i) => (
+                        <div
+                            key={i}
+                            className="confetti rounded-sm"
+                            style={{
+                                left: `${Math.random() * 100}%`,
+                                backgroundColor: ['#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6'][i % 5],
+                                animation: `confetti ${3 + Math.random() * 2}s linear infinite`,
+                                animationDelay: `${Math.random() * 3}s`
+                            }}
+                        />
+                    ))}
+                </div>
+
+                <div className="absolute -top-24 -right-24 opacity-5 animate-[spin_60s_linear_infinite]">
                     <svg className="w-96 h-96" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         {iconPath}
                     </svg>
